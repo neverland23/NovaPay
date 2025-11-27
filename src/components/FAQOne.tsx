@@ -91,7 +91,7 @@ const FAQOne: React.FC = () => {
                     />
                   </span>
                   <span className='faq-text fw-medium tw-text-lg text-dark-500 group-hover-text-white tw-transition-04-secend d-block'>
-                    Mobile Banking
+                    Benefit
                   </span>
                 </button>
               </li>
@@ -170,7 +170,7 @@ const FAQOne: React.FC = () => {
                       aria-expanded='true'
                       aria-controls='collapseOne'
                     >
-                      What services do you offer?
+                      What is NovaPay?
                     </button>
                   </h2>
                   <div
@@ -180,11 +180,7 @@ const FAQOne: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
+                        NovaPay is a global banking and payment platform that provides users with their own USD and EUR accounts to send, receive, withdraw, and manage money across 100+ countries. We support traditional banking rails as well as modern digital payment channels like crypto withdrawals.
                       </p>
                     </div>
                   </div>
@@ -203,7 +199,7 @@ const FAQOne: React.FC = () => {
                       aria-expanded='false'
                       aria-controls='collapseTwo'
                     >
-                      How do I access online and mobile banking?
+                      Who can open a NovaPay account?
                     </button>
                   </h2>
                   <div
@@ -213,11 +209,7 @@ const FAQOne: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
+                        Anyone who needs global payment flexibility — freelancers, remote workers, businesses, and everyday individuals. Account creation is free, and there are no monthly maintenance fees.
                       </p>
                     </div>
                   </div>
@@ -236,7 +228,7 @@ const FAQOne: React.FC = () => {
                       aria-expanded='false'
                       aria-controls='collapseThree1'
                     >
-                      What fees should I expect?
+                      How fast can I start using my account?
                     </button>
                   </h2>
                   <div
@@ -246,44 +238,7 @@ const FAQOne: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className='accordion-item tw-mb-6 rounded-3 bg-neutral-10 border-neutral-1px-solid'
-                  data-aos='fade-up'
-                  data-aos-duration={1200}
-                >
-                  <h2 className='accordion-header cursor-big position-relative z-2'>
-                    <button
-                      className='accordion-button collapsed bg-neutral-10 rounded-3 tw-text-xl tw-gap-1'
-                      type='button'
-                      data-bs-toggle='collapse'
-                      data-bs-target='#collapseFour1'
-                      aria-expanded='false'
-                      aria-controls='collapseFour1'
-                    >
-                      What security measures protect my information?
-                    </button>
-                  </h2>
-                  <div
-                    id='collapseFour1'
-                    className='accordion-collapse collapse'
-                    data-bs-parent='#accordionExample-one'
-                  >
-                    <div className='accordion-body'>
-                      <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
+                        Once you complete the simple verification process, your USD or EUR account becomes active immediately. You can start receiving payments the same day.
                       </p>
                     </div>
                   </div>
@@ -312,7 +267,7 @@ const FAQOne: React.FC = () => {
                       aria-expanded='true'
                       aria-controls='collapseOnee'
                     >
-                      What services do you offer?
+                      What are the main benefits of using NovaPay?
                     </button>
                   </h2>
                   <div
@@ -322,11 +277,7 @@ const FAQOne: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
+                        You get free USD/EUR accounts, same-day settlements, global payment coverage, crypto withdrawal options, virtual cards, invoice generation, and multilingual customer support.
                       </p>
                     </div>
                   </div>
@@ -345,7 +296,7 @@ const FAQOne: React.FC = () => {
                       aria-expanded='false'
                       aria-controls='collapseTwoo'
                     >
-                      How do I access online and mobile banking?
+                      Can I earn interest on my balance?
                     </button>
                   </h2>
                   <div
@@ -355,11 +306,7 @@ const FAQOne: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
+                        Yes. You can earn up to 8% annual interest on your savings by simply holding funds in your account.
                       </p>
                     </div>
                   </div>
@@ -378,7 +325,7 @@ const FAQOne: React.FC = () => {
                       aria-expanded='false'
                       aria-controls='collapseThree2'
                     >
-                      What fees should I expect?
+                      Does NovaPay support business use?
                     </button>
                   </h2>
                   <div
@@ -388,44 +335,7 @@ const FAQOne: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className='accordion-item tw-mb-6 rounded-3 bg-neutral-10 border-neutral-1px-solid'
-                  data-aos='fade-up'
-                  data-aos-duration={1200}
-                >
-                  <h2 className='accordion-header cursor-big position-relative z-2'>
-                    <button
-                      className='accordion-button collapsed bg-neutral-10 rounded-3 tw-text-xl tw-gap-1'
-                      type='button'
-                      data-bs-toggle='collapse'
-                      data-bs-target='#collapseFour2'
-                      aria-expanded='false'
-                      aria-controls='collapseFour2'
-                    >
-                      What security measures protect my information?
-                    </button>
-                  </h2>
-                  <div
-                    id='collapseFour2'
-                    className='accordion-collapse collapse'
-                    data-bs-parent='#accordionExample-two'
-                  >
-                    <div className='accordion-body'>
-                      <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
+                        Absolutely. Businesses can open USD/EUR accounts, send batch payments to global teams, receive funds from international clients, and manage large-scale transactions easily.
                       </p>
                     </div>
                   </div>
@@ -454,7 +364,7 @@ const FAQOne: React.FC = () => {
                       aria-expanded='true'
                       aria-controls='collapseOneee'
                     >
-                      What services do you offer?
+                      What types of payments can I receive?
                     </button>
                   </h2>
                   <div
@@ -464,11 +374,7 @@ const FAQOne: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
+                        You can receive ACH, Wire, SEPA, and SWIFT transfers from banks worldwide. You can also receive payments from platforms like PayPal, Wise, Revolut, Upwork, Deel, Payoneer, YouTube, and more.
                       </p>
                     </div>
                   </div>
@@ -487,7 +393,7 @@ const FAQOne: React.FC = () => {
                       aria-expanded='false'
                       aria-controls='collapseTwooo'
                     >
-                      How do I access online and mobile banking?
+                      How can I withdraw money from my NovaPay account?
                     </button>
                   </h2>
                   <div
@@ -497,11 +403,13 @@ const FAQOne: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
+                        You can withdraw via: <br/>
+
+                        Bank transfers <br/>
+
+                        Mobile money wallets <br/>
+
+                        Crypto exchanges (Binance, Bybit, Coinbase, Coins.PH, etc.)
                       </p>
                     </div>
                   </div>
@@ -520,7 +428,7 @@ const FAQOne: React.FC = () => {
                       aria-expanded='false'
                       aria-controls='collapseThree3'
                     >
-                      What fees should I expect?
+                      Are money transfers instant?
                     </button>
                   </h2>
                   <div
@@ -530,44 +438,7 @@ const FAQOne: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className='accordion-item tw-mb-6 rounded-3 bg-neutral-10 border-neutral-1px-solid'
-                  data-aos='fade-up'
-                  data-aos-duration={1200}
-                >
-                  <h2 className='accordion-header cursor-big position-relative z-2'>
-                    <button
-                      className='accordion-button collapsed bg-neutral-10 rounded-3 tw-text-xl tw-gap-1'
-                      type='button'
-                      data-bs-toggle='collapse'
-                      data-bs-target='#collapseFour3'
-                      aria-expanded='false'
-                      aria-controls='collapseFour3'
-                    >
-                      What security measures protect my information?
-                    </button>
-                  </h2>
-                  <div
-                    id='collapseFour3'
-                    className='accordion-collapse collapse'
-                    data-bs-parent='#accordionExample-three'
-                  >
-                    <div className='accordion-body'>
-                      <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
+                        Incoming USD/EUR transfers are processed instantly whenever supported. For outgoing transfers, Same-Day Settlements are available on supported rails like ACH and SEPA.
                       </p>
                     </div>
                   </div>
@@ -596,7 +467,7 @@ const FAQOne: React.FC = () => {
                       aria-expanded='true'
                       aria-controls='collapseOneeee'
                     >
-                      What services do you offer?
+                      Is it free to open and maintain an account?
                     </button>
                   </h2>
                   <div
@@ -606,11 +477,7 @@ const FAQOne: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
+                        Yes. Opening a USD or EUR account is completely free, and there are no monthly or hidden maintenance fees.
                       </p>
                     </div>
                   </div>
@@ -629,7 +496,7 @@ const FAQOne: React.FC = () => {
                       aria-expanded='false'
                       aria-controls='collapseTwoooo'
                     >
-                      How do I access online and mobile banking?
+                      Are there fees for sending or receiving money?
                     </button>
                   </h2>
                   <div
@@ -639,11 +506,7 @@ const FAQOne: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
+                        Receiving money is free in most cases. Sending funds (ACH, Wire, SEPA, or crypto withdrawals) may have small service fees depending on the transfer method and destination.
                       </p>
                     </div>
                   </div>
@@ -662,7 +525,7 @@ const FAQOne: React.FC = () => {
                       aria-expanded='false'
                       aria-controls='collapseThree4'
                     >
-                      What fees should I expect? xxx
+                      Are there currency conversion or FX fees?
                     </button>
                   </h2>
                   <div
@@ -672,44 +535,7 @@ const FAQOne: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className='accordion-item tw-mb-6 rounded-3 bg-neutral-10 border-neutral-1px-solid'
-                  data-aos='fade-up'
-                  data-aos-duration={1200}
-                >
-                  <h2 className='accordion-header cursor-big position-relative z-2'>
-                    <button
-                      className='accordion-button collapsed bg-neutral-10 rounded-3 tw-text-xl tw-gap-1'
-                      type='button'
-                      data-bs-toggle='collapse'
-                      data-bs-target='#collapseFour4'
-                      aria-expanded='false'
-                      aria-controls='collapseFour4'
-                    >
-                      What security measures protect my information?
-                    </button>
-                  </h2>
-                  <div
-                    id='collapseFour4'
-                    className='accordion-collapse collapse'
-                    data-bs-parent='#accordionExample-four'
-                  >
-                    <div className='accordion-body'>
-                      <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
+                        Yes, FX conversions apply when switching between currencies (USD ⇄ EUR ⇄ GBP). We always provide competitive market-based rates with full transparency before you confirm the exchange.
                       </p>
                     </div>
                   </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 const OurFeatureOne: React.FC = () => {
   return (
     <>
-      <section className='py-140 z-1 overflow-hidden'>
+      <section className='py-140 z-1 overflow-hidden' id="features">
         <div className='container'>
           <div className='d-flex align-items-center tw-gap-3 justify-content-between flex-wrap tw-mb-80-px'>
             <div className='max-w-526'>
@@ -126,7 +126,7 @@ const OurFeatureOne: React.FC = () => {
                   data-aos='fade-right'
                   data-aos-duration={1000}
                 >
-                  <div className='our-feature-card-three max-w-219 bg-warning-500 rounded-3 tw-px-6 tw-py-5 d-flex align-items-center tw-gap-4 position-absolute inset-inline-start-0 inset-block-start-0'>
+                  <div className='our-feature-card-three max-w-219 bg-main rounded-3 tw-px-6 tw-py-5 d-flex align-items-center tw-gap-4 position-absolute inset-inline-start-0 inset-block-start-0'>
                     <Image
                       width={54}
                       height={54}
@@ -150,7 +150,7 @@ const OurFeatureOne: React.FC = () => {
                   data-aos='fade-left'
                   data-aos-duration={1000}
                 >
-                  <div className='our-feature-card-four max-w-176 bg-main-600 rounded-3 tw-px-6 tw-py-5 position-absolute inset-block-end-0 inset-inline-end-0'>
+                  <div className='our-feature-card-four max-w-176 bg-main2 rounded-3 tw-px-6 tw-py-5 position-absolute inset-block-end-0 inset-inline-end-0'>
                     <div>
                       <h3 className='fw-normal text-dark-600 mb-1 cursor-big counter'>
                         {/* CounterView */}

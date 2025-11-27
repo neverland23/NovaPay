@@ -129,7 +129,7 @@ const BannerOne: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className='banner-brand-item bg-main-600 tw-pt-15 tw-ps-15 tw-pb-8 tw-pe-7  tw-w-1662-px tw-w-100vw banner-slider-bg-clip-path banner-clip__path-rtl border-top-left-80-px'>
+          <div className='banner-brand-item bg-main-gradient tw-pt-15 tw-ps-15 tw-pb-8 tw-pe-7  tw-w-1662-px tw-w-100vw banner-slider-bg-clip-path banner-clip__path-rtl border-top-left-80-px'>
             <h3
               className=' fw-normal cursor-big tw-mb-2'
               data-aos='fade-up'

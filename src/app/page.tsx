@@ -19,13 +19,13 @@ import FooterOne from "@/components/FooterOne";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Home | NovaPay Money Exchange Next JS Template",
+    title: "Home | NovaPay",
     description:
-      "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+      "This is NovaPay Home",
     openGraph: {
       title: "Home | NovaPay",
       description:
-        "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+        "This is NovaPay Home",
       url: "https://nextjs.novapay.wowtheme7.com",
       type: "website",
       images: [
@@ -67,17 +67,8 @@ export default function Home() {
       {/* WorkingSectionOne */}
       <WorkingSectionOne />
 
-      {/* TestimonialsOne */}
-      <TestimonialsOne />
-
       {/* FAQOne */}
       <FAQOne />
-
-      {/* PaymentMethodOne */}
-      <PaymentMethodOne />
-
-      {/* BlogOne */}
-      <BlogOne />
 
       {/* NewsletterOne */}
       <NewsletterOne />

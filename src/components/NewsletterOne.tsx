@@ -45,7 +45,7 @@ const NewsletterOne: React.FC = () => {
                     alt='Image'
                     className='margin-inline-start--20px flex-shrink-0'
                   />
-                  <span className='bg-main-600 w-15 h-15 rounded-circle text-dark-600 d-flex align-items-center justify-content-center border-white margin-inline-start--20px flex-shrink-0'>
+                  <span className='bg-main-gradient w-15 h-15 rounded-circle text-bold text-dark-600 d-flex align-items-center justify-content-center border-white margin-inline-start--20px flex-shrink-0'>
                     +15K
                   </span>
                 </div>

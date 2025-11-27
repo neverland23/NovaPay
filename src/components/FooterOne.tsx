@@ -23,8 +23,7 @@ const FooterOne: React.FC = () => {
                   />
                 </Link>
                 <p className='fw-normal tw-text-lg text-neutral-10 tw-mb-8'>
-                  We’ve got the perfect tools for your success. Join us today
-                  and empower toward excellence.
+                  Next-level payment infrastructure for instant, secure, and global transactions.
                 </p>
                 <ul className='d-flex align-items-center tw-gap-5'>
                   <li>
@@ -86,10 +85,10 @@ const FooterOne: React.FC = () => {
                   </li>
                   <li className='tw-mb-4'>
                     <a
-                      href='#'
+                      href='#features'
                       className='fw-normal tw-text-lg text-neutral-10 hover-text-main-600'
                     >
-                      Payment
+                      Features
                     </a>
                   </li>
                   <li className='tw-mb-4'>

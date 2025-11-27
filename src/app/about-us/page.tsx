@@ -17,13 +17,13 @@ import FAQOne from "@/components/FAQOne";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "About | NovaPay Money Exchange Next JS Template",
+    title: "About | NovaPay",
     description:
-      "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+      "This is Nova About",
     openGraph: {
       title: "About | NovaPay",
       description:
-        "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+        "This is Nova About",
       url: "https://nextjs.novapay.wowtheme7.com/about",
       type: "website",
       images: [
@@ -61,20 +61,9 @@ const Page: React.FC = () => {
 
       {/* WhyChooseUsOne */}
       <WhyChooseUsOne />
-
-      {/* TeamMemberOne */}
-      <TeamMemberOne />
-
+      
       {/* JoinSectionOne */}
       <JoinSectionOne />
-
-      {/* TestimonialsTwo */}
-      <div className='bg-neutral-10'>
-        <TestimonialsTwo />
-      </div>
-
-      {/* FAQOne */}
-      <FAQOne />
 
       {/* NewsletterTwo */}
       <NewsletterTwo />

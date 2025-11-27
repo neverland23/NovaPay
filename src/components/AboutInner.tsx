@@ -28,27 +28,6 @@ const AboutInner: React.FC = () => {
               Transfer &amp; Deposite Money Anytime, Anywhere In The World
             </h2>
           </div>
-          <div className='max-w-306'>
-            <p
-              className='fw-normal tw-text-lg text-dark-600 tw-mb-3'
-              data-aos='fade-up'
-              data-aos-duration={1000}
-            >
-              Help agencies to define their business objectives and then create{" "}
-            </p>
-            <div
-              className='max-w-181 position-relative'
-              data-aos='fade-up'
-              data-aos-duration={1200}
-            >
-              <Link
-                href='/about-us'
-                className='about-us-three-link bg-main-600 tw-px-5 tw-py-205 w-100 rounded-3 border-two-px-solid text-dark-600 fw-semibold hover-text-dark-600 '
-              >
-                MORE ABOUT US
-              </Link>
-            </div>
-          </div>
         </div>
         <div className='row gy-4'>
           <div className='col-xl-5'>

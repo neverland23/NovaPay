@@ -161,6 +161,16 @@
   --size-15: 3.75rem;
   --size-16: 4rem;
   --size-17: 4.25rem;
+  --main2-0: hsl(
+    var(--main-h2),
+    var(--main-s2),
+    var(--main-l2)
+  );
+  --main-0: hsl(
+    var(--main-h),
+    var(--main-s),
+    var(--main-l)
+  );
   --main-50: hsl(
     var(--main-h),
     var(--main-s),
@@ -1287,8 +1297,16 @@ input:focus-visible {
 
 /* Bg Image Css End */
 /* hover bg class start */
+.bg-main2 {
+  background-color: var(--main2-0) !important;
+}
+
 .bg-main-gradient {
   background: linear-gradient(90deg, hsl(var(--main)), hsl(var(--main2)));
+}
+
+.bg-main {
+  background-color: var(--main-0) !important;
 }
 
 .bg-main-50 {
@@ -2941,6 +2959,10 @@ input:focus-visible {
 }
 .text-main {
   color: var(--main-600);
+}
+
+.text-bold {
+  font-weight: bold;
 }
 
 /* Colors class End */
