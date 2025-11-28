@@ -1,7 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const LoginInInner: React.FC = () => {
+  const router = useRouter();
+
+  const handleRedirect = () => {
+    router.push("/dashboard");
+  };
+
   return (
     <section className='position-relative'>
       <div className='d-flex tw-h-screen'>
@@ -98,7 +107,10 @@ const LoginInInner: React.FC = () => {
                   Forgot Password?
                 </a>
               </div>
-              <button className='text-white bg-main-gradient w-100 tw-py-3 rounded-3 text-center tw-mb-3'>
+              <button 
+                className='text-white bg-main-gradient w-100 tw-py-3 rounded-3 text-center tw-mb-3'
+                onClick={handleRedirect}
+              >
                 Sign In
               </button>
               <span className='fw-semibold tw-text-4 text-primary-50 text-center justify-content-center d-flex'>
