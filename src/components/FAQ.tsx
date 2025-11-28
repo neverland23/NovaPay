@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const FAQOne: React.FC = () => {
+const FAQ: React.FC = () => {
   return (
     <section className='py-140 z-1 overflow-hidden'>
       <div className='container'>
@@ -549,4 +549,4 @@ const FAQOne: React.FC = () => {
   );
 };
 
-export default FAQOne;
+export default FAQ;

@@ -2,18 +2,18 @@ import React from "react";
 import type { Metadata } from "next";
 import AOSWrap from "@/helper/AOSWrap";
 import Preloader from "@/helper/Preloader";
-import TopHeaderOne from "@/components/TopHeaderOne";
-import HeaderOne from "@/components/HeaderOne";
+import TopHeader from "@/components/TopHeader";
+import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import NewsletterTwo from "@/components/NewsletterTwo";
-import FooterThree from "@/components/FooterThree";
+import Footer from "@/components/Footer";
 import AboutInner from "@/components/AboutInner";
 import OurBankOne from "@/components/OurBankOne";
 import WhyChooseUsOne from "@/components/WhyChooseUsOne";
 import TeamMemberOne from "@/components/TeamMemberOne";
 import JoinSectionOne from "@/components/JoinSectionOne";
 import TestimonialsTwo from "@/components/TestimonialsTwo";
-import FAQOne from "@/components/FAQOne";
+import FAQ from "@/components/FAQ";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
@@ -44,11 +44,11 @@ const Page: React.FC = () => {
       {/* <Preloader /> */}
       <Preloader />
 
-      {/* TopHeaderOne */}
-      <TopHeaderOne />
+      {/* TopHeader */}
+      <TopHeader />
 
       {/* HeaderTwo */}
-      <HeaderOne />
+      <Header />
 
       {/* Breadcrumb */}
       <Breadcrumb title={"About Us"} />
@@ -59,17 +59,11 @@ const Page: React.FC = () => {
       {/* OurBankOne */}
       <OurBankOne />
 
-      {/* WhyChooseUsOne */}
-      <WhyChooseUsOne />
-      
-      {/* JoinSectionOne */}
-      <JoinSectionOne />
-
       {/* NewsletterTwo */}
       <NewsletterTwo />
 
       {/* FooterThree */}
-      <FooterThree />
+      <Footer />
     </AOSWrap>
   );
 };

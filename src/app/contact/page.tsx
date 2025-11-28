@@ -2,22 +2,22 @@ import React from "react";
 import type { Metadata } from "next";
 import AOSWrap from "@/helper/AOSWrap";
 import Preloader from "@/helper/Preloader";
-import TopHeaderOne from "@/components/TopHeaderOne";
-import HeaderOne from "@/components/HeaderOne";
+import TopHeader from "@/components/TopHeader";
+import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
-import NewsletterTwo from "@/components/NewsletterTwo";
-import FooterThree from "@/components/FooterThree";
+import Newsletter from "@/components/Newsletter";
+import Footer from "@/components/Footer";
 import ContactInner from "@/components/ContactInner";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Contact | NovaPay Money Exchange Next JS Template",
+    title: "Contact | NovaPay",
     description:
-      "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+      "This is NovaPay Contact Us",
     openGraph: {
       title: "Contact | NovaPay",
       description:
-        "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+        "This is NovaPay Contact Us",
       url: "https://nextjs.novapay.wowtheme7.com/contact",
       type: "website",
       images: [
@@ -38,11 +38,11 @@ const Page: React.FC = () => {
       {/* <Preloader /> */}
       <Preloader />
 
-      {/* TopHeaderTwo */}
-      <TopHeaderOne />
+      {/* TopHeader */}
+      <TopHeader />
 
-      {/* HeaderTwo */}
-      <HeaderOne />
+      {/* Header */}
+      <Header />
 
       {/* Breadcrumb */}
       <Breadcrumb title={"Contact"} />
@@ -50,11 +50,11 @@ const Page: React.FC = () => {
       {/* ContactInner */}
       <ContactInner />
 
-      {/* NewsletterTwo */}
-      <NewsletterTwo />
+      {/* Newsletter */}
+      <Newsletter />
 
-      {/* FooterThree */}
-      <FooterThree />
+      {/* Footer */}
+      <Footer />
     </AOSWrap>
   );
 };

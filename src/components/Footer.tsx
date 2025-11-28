@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const FooterOne: React.FC = () => {
+const Footer: React.FC = () => {
   return (
     <footer className='tw-pt-250px bg-dark-600 z-1 overflow-hidden'>
       <div className='container'>
         <div className='tw-mb-80-px'>
           <div className='row gy-5'>
-            <div className='col-lg-4 col-md-4 col-sm-6'>
+            <div className='col-lg-4 col-md-4 col-sm-12'>
               <div
                 className='max-w-306'
                 data-aos='fade-up'
@@ -69,7 +69,7 @@ const FooterOne: React.FC = () => {
                 </ul>
               </div>
             </div>
-            <div className='col-lg-2 col-md-4 col-sm-6'>
+            <div className='col-lg-4 col-md-4 col-sm-12'>
               <div data-aos='fade-up' data-aos-duration={800}>
                 <h4 className='text-white fw-normal tw-mb-10 cursor-big'>
                   Quick Links
@@ -85,10 +85,18 @@ const FooterOne: React.FC = () => {
                   </li>
                   <li className='tw-mb-4'>
                     <a
-                      href='#features'
+                      href='/our-services'
                       className='fw-normal tw-text-lg text-neutral-10 hover-text-main-600'
                     >
-                      Features
+                      Our Services
+                    </a>
+                  </li>
+                  <li className='tw-mb-4'>
+                    <a
+                      href='/pricing-plan'
+                      className='fw-normal tw-text-lg text-neutral-10 hover-text-main-600'
+                    >
+                      Pricing Plan
                     </a>
                   </li>
                   <li className='tw-mb-4'>
@@ -110,48 +118,7 @@ const FooterOne: React.FC = () => {
                 </ul>
               </div>
             </div>
-            <div className='col-lg-2 col-md-4 col-sm-6'>
-              <div data-aos='fade-up' data-aos-duration={1000}>
-                <h4 className='text-white fw-normal tw-mb-10 cursor-big'>
-                  Our Services
-                </h4>
-                <ul>
-                  <li className='tw-mb-4'>
-                    <a
-                      href='#'
-                      className='fw-normal tw-text-lg text-neutral-10 hover-text-main-600'
-                    >
-                      Transfer Money
-                    </a>
-                  </li>
-                  <li className='tw-mb-4'>
-                    <a
-                      href='#'
-                      className='fw-normal tw-text-lg text-neutral-10 hover-text-main-600'
-                    >
-                      Saving Account
-                    </a>
-                  </li>
-                  <li className='tw-mb-4'>
-                    <a
-                      href='#'
-                      className='fw-normal tw-text-lg text-neutral-10 hover-text-main-600'
-                    >
-                      Online Shopping
-                    </a>
-                  </li>
-                  <li className='tw-mb-4'>
-                    <a
-                      href='#'
-                      className='fw-normal tw-text-lg text-neutral-10 hover-text-main-600'
-                    >
-                      Pay Bills
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className='col-lg-4 col-md-4 col-sm-6'>
+            <div className='col-lg-4 col-md-4 col-sm-12'>
               <div
                 className='max-w-306'
                 data-aos='fade-up'
@@ -161,13 +128,13 @@ const FooterOne: React.FC = () => {
                   Contact Us
                 </h4>
                 <p className='fw-normal tw-text-lg text-neutral-10 tw-mb-705'>
-                  3891 Ranch view Dr. Richardson, California 62639
+                  3891 Ranch view Dr. Richard, California 62639
                 </p>
                 <h5 className='fw-bold text-neutral-10 tw-mb-3 cursor-big'>
-                  (702) 555-0122
+                  (872) 217-3342
                 </h5>
                 <span className='tw-text-lg fw-normal text-neutral-10'>
-                  kenzi.lawson@example.com
+                  jhmun023216@gmail.com
                 </span>
               </div>
             </div>
@@ -179,9 +146,6 @@ const FooterOne: React.FC = () => {
             <p className='fw-semibold tw-text-lg text-white'>
               Copyright @ {new Date().getFullYear()} NovaPay
             </p>
-            <span className='fw-semibold tw-text-lg text-white'>
-              Designed By <span className='text-main-600'>wowtheme7</span>
-            </span>
           </div>
         </div>
         {/* ================ botter footer section end ====================== */}
@@ -190,4 +154,4 @@ const FooterOne: React.FC = () => {
   );
 };
 
-export default FooterOne;
+export default Footer;

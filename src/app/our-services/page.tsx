@@ -2,26 +2,24 @@ import React from "react";
 import type { Metadata } from "next";
 import AOSWrap from "@/helper/AOSWrap";
 import Preloader from "@/helper/Preloader";
-import TopHeaderOne from "@/components/TopHeaderOne";
-import HeaderOne from "@/components/HeaderOne";
+import TopHeader from "@/components/TopHeader";
+import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
-import NewsletterTwo from "@/components/NewsletterTwo";
-import FooterThree from "@/components/FooterThree";
-import TestimonialsTwo from "@/components/TestimonialsTwo";
-import FAQOne from "@/components/FAQOne";
-import WhyChooseUsThree from "@/components/WhyChooseUsThree";
-import OurServicesTwo from "@/components/OurServicesTwo";
-import PricingPlanOne from "@/components/PricingPlanOne";
+import Newsletter from "@/components/Newsletter";
+import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import Services from "@/components/Services";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Our-services | NovaPay Money Exchange Next JS Template",
+    title: "Our-services | NovaPay",
     description:
-      "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+      "This is NovaPay Our Service",
     openGraph: {
       title: "Our-services | NovaPay",
       description:
-        "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+        "This is NovaPay Our Service",
       url: "https://nextjs.novapay.wowtheme7.com/our-services",
       type: "website",
       images: [
@@ -42,37 +40,29 @@ const Page: React.FC = () => {
       {/* <Preloader /> */}
       <Preloader />
 
-      {/* TopHeaderTwo */}
-      <TopHeaderOne />
+      {/* TopHeader */}
+      <TopHeader />
 
-      {/* HeaderTwo */}
-      <HeaderOne />
+      {/* Header */}
+      <Header />
 
       {/* Breadcrumb */}
       <Breadcrumb title={"Our Services"} />
 
-      {/* WhyChooseUsThree */}
-      <WhyChooseUsThree />
+      {/* WhyChooseUs */}
+      <WhyChooseUs />
 
-      {/* OurServicesTwo */}
-      <OurServicesTwo />
+      {/* Services */}
+      <Services moreBtnHidden={true} />
 
-      {/* PricingPlanOne */}
-      <PricingPlanOne />
+      {/* FAQ */}
+      <FAQ />
 
-      {/* TestimonialsTwo */}
-      <div className='bg-neutral-10'>
-        <TestimonialsTwo />
-      </div>
+      {/* Newsletter */}
+      <Newsletter />
 
-      {/* FAQOne */}
-      <FAQOne />
-
-      {/* NewsletterTwo */}
-      <NewsletterTwo />
-
-      {/* FooterThree */}
-      <FooterThree />
+      {/* Footer */}
+      <Footer />
     </AOSWrap>
   );
 };

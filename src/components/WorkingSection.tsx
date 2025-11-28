@@ -1,4 +1,4 @@
-const WorkingSectionOne: React.FC = () => {
+const WorkingSection: React.FC = () => {
   return (
     <section className='py-140 mt-2 z-1 bg-neutral-10 margin-top--311px overflow-hidden'>
       <div className='container'>
@@ -112,4 +112,4 @@ const WorkingSectionOne: React.FC = () => {
   );
 };
 
-export default WorkingSectionOne;
+export default WorkingSection;

@@ -123,6 +123,11 @@
   --main-s2: 59%;
   --main-l2: 49%;
   --main2: var(--main-h2) var(--main-s2) var(--main-l2);
+  /* template 3rd color */
+  --main-h3: 186;
+  --main-s3: 61%;
+  --main-l3: 16%;
+  --main3: var(--main-h3) var(--main-s3) var(--main-l3);
   /* White Color */
   --white: 0 0% 100%;
   --black: 0 0% 0%;
@@ -161,6 +166,11 @@
   --size-15: 3.75rem;
   --size-16: 4rem;
   --size-17: 4.25rem;
+  --main3-0: hsl(
+    var(--main-h3),
+    var(--main-s3),
+    var(--main-l3)
+  );
   --main2-0: hsl(
     var(--main-h2),
     var(--main-s2),
@@ -1299,6 +1309,10 @@ input:focus-visible {
 /* hover bg class start */
 .bg-main2 {
   background-color: var(--main2-0) !important;
+}
+
+.bg-main3 {
+  background-color: var(--main3-0) !important;
 }
 
 .bg-main-gradient {

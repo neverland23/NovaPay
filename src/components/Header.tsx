@@ -4,56 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
-const HeaderOne: React.FC = () => {
+const Header: React.FC = () => {
   const pathname = usePathname();
   const MENU = [
-    {
-      label: "HOME",
-      children: [
-        { label: "Home One", to: "/" },
-        { label: "Home Two", to: "/demo-2" },
-        { label: "Home Three", to: "/demo-3" },
-        { label: "Home Four", to: "/demo-4" },
-      ],
-    },
-    {
-      label: "BLOG",
-      children: [
-        { label: "Blog Grid", to: "/blog-grid" },
-        { label: "Blog List", to: "/blog-list" },
-        { label: "Blog Standard", to: "/blog-standard" },
-        { label: "Blog Details", to: "/blog-details" },
-      ],
-    },
-    {
-      label: "Dashboard",
-      children: [
-        { label: "Dashboard", to: "/dashboard" },
-        { label: "Transaction", to: "/transactions" },
-        { label: "Send Money", to: "/send-money" },
-        { label: "Request Money", to: "/request-money" },
-        { label: "Deposit Money", to: "/deposit-money" },
-        { label: "Withdraw Money", to: "/withdraw-money" },
-        { label: "Notifications", to: "/notifications" },
-        { label: "Account", to: "/my-profile" },
-      ],
-    },
-    {
-      label: "ABOUT",
-      children: [{ label: "About Us", to: "/about-us" }],
-    },
-    {
-      label: "PAGES",
-      children: [
-        { label: "Fees", to: "/fees-others" },
-        { label: "Our Services", to: "/our-services" },
-        { label: "Services Details", to: "/services-details" },
-        { label: "Our Team", to: "/our-team" },
-        { label: "Pricing Plan", to: "/pricing-plan" },
-        { label: "FAQ", to: "/faq" },
-      ],
-    },
-    { label: "CONTACT", to: "/contact" },
+    { label: "Our Services", to: "/our-services" },
+    { label: "Pricing Plan", to: "/pricing-plan" },
+    { label: "FAQ", to: "/faq" },
+    { label: "About Us", to: "/about-us" },
+    { label: "Contact", to: "/contact" },
   ];
 
   const [scroll, setScroll] = useState<boolean>(false);
@@ -294,4 +252,4 @@ const HeaderOne: React.FC = () => {
   );
 };
 
-export default HeaderOne;
+export default Header;

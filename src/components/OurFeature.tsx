@@ -1,7 +1,7 @@
 import CounterView from "@/helper/CounterView";
 import Image from "next/image";
 
-const OurFeatureOne: React.FC = () => {
+const OurFeature: React.FC = () => {
   return (
     <>
       <section className='py-140 z-1 overflow-hidden' id="features">
@@ -171,4 +171,4 @@ const OurFeatureOne: React.FC = () => {
   );
 };
 
-export default OurFeatureOne;
+export default OurFeature;

@@ -3,7 +3,7 @@ import Image from "next/image";
 import CounterView from "@/helper/CounterView";
 import PopupVideoOne from "@/components/popup/PopupVideoOne";
 
-const BannerOne: React.FC = () => {
+const Banner: React.FC = () => {
   return (
     <>
       <section className='pt-120 bg-base-two-600 z-1 position-relative overflow-hidden'>
@@ -224,4 +224,4 @@ const BannerOne: React.FC = () => {
   );
 };
 
-export default BannerOne;
+export default Banner;

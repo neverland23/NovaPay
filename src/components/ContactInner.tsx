@@ -16,7 +16,7 @@ const ContactInner: React.FC = () => {
                     Call US 24/7
                   </h4>
                   <span className='fw-normal tw-text-lg text-dark-500 tw-duration-500 group-hover-text-white '>
-                    (205) 555-0100
+                    (872) 217-3342
                   </span>
                 </div>
               </div>
@@ -33,7 +33,7 @@ const ContactInner: React.FC = () => {
                     Email Us Anytime
                   </h4>
                   <span className='fw-normal tw-text-lg text-dark-500 tw-duration-500 group-hover-text-white '>
-                    zigor.amara@redviet.com
+                    jhmun023216@gmail.com
                   </span>
                 </div>
               </div>
@@ -50,7 +50,7 @@ const ContactInner: React.FC = () => {
                     Our Location
                   </h4>
                   <span className='fw-normal tw-text-lg text-dark-500 tw-duration-500 group-hover-text-white '>
-                    SPACEX Hawthorne, CA
+                    3891 Ranch view Dr. Richard, California 62639
                   </span>
                 </div>
               </div>
@@ -155,239 +155,9 @@ const ContactInner: React.FC = () => {
                 />
               </div>
             </div>
-            <button className='tw-px-4 tw-py-3 bg-base-two-600 text-white fw-semibold tw-text-lg  w-100 tw-rounded-md text-center'>
+            <button className='tw-px-4 tw-py-3 bg-main-gradient text-white fw-semibold tw-text-lg  w-100 tw-rounded-md text-center'>
               Submit Now
             </button>
-          </div>
-        </div>
-        <div className='pt-140'>
-          <div className='tw-mb-15'>
-            <div
-              className='d-flex align-items-center tw-gap-1 justify-content-center tw-mb-3'
-              data-aos='fade-up'
-              data-aos-duration={600}
-            >
-              <Image
-                width={27}
-                height={27}
-                src='/assets/images/icon/star-icon3.png'
-                alt='Image'
-              />
-              <h5 className='fw-normal text-base-two-600'>FAQ</h5>
-            </div>
-            <h2
-              className='fw-normal cursor-big h1 text-center'
-              data-aos='fade-up'
-              data-aos-duration={800}
-            >
-              Frequently Asked Questions
-            </h2>
-          </div>
-          <div className='accordion' id='accordionExample'>
-            <div className='d-flex tw-gap-4 flex-wrap'>
-              <div className='max-w-610-px w-100'>
-                <div
-                  className='accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid'
-                  data-aos='fade-up'
-                  data-aos-duration={600}
-                >
-                  <h2 className='accordion-header cursor-big'>
-                    <button
-                      className='accordion-button bg-white rounded-3 tw-text-xl'
-                      type='button'
-                      data-bs-toggle='collapse'
-                      data-bs-target='#collapseOne'
-                      aria-expanded='true'
-                      aria-controls='collapseOne'
-                    >
-                      What services do you offer?
-                    </button>
-                  </h2>
-                  <div
-                    id='collapseOne'
-                    className='accordion-collapse collapse show'
-                    data-bs-parent='#accordionExample'
-                  >
-                    <div className='accordion-body'>
-                      <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className='accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid'
-                  data-aos='fade-up'
-                  data-aos-duration={800}
-                >
-                  <h2 className='accordion-header cursor-big'>
-                    <button
-                      className='accordion-button collapsed bg-white rounded-3 tw-text-xl'
-                      type='button'
-                      data-bs-toggle='collapse'
-                      data-bs-target='#collapseTwo'
-                      aria-expanded='false'
-                      aria-controls='collapseTwo'
-                    >
-                      How do I access online and mobile banking?
-                    </button>
-                  </h2>
-                  <div
-                    id='collapseTwo'
-                    className='accordion-collapse collapse'
-                    data-bs-parent='#accordionExample'
-                  >
-                    <div className='accordion-body'>
-                      <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className='accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid'
-                  data-aos='fade-up'
-                  data-aos-duration={1000}
-                >
-                  <h2 className='accordion-header cursor-big'>
-                    <button
-                      className='accordion-button collapsed bg-white rounded-3 tw-text-xl'
-                      type='button'
-                      data-bs-toggle='collapse'
-                      data-bs-target='#collapseThree'
-                      aria-expanded='false'
-                      aria-controls='collapseThree'
-                    >
-                      What fees should I expect?
-                    </button>
-                  </h2>
-                  <div
-                    id='collapseThree'
-                    className='accordion-collapse collapse'
-                    data-bs-parent='#accordionExample'
-                  >
-                    <div className='accordion-body'>
-                      <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='max-w-610-px w-100'>
-                <div
-                  className='accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid'
-                  data-aos='fade-up'
-                  data-aos-duration={700}
-                >
-                  <h2 className='accordion-header cursor-big'>
-                    <button
-                      className='accordion-button collapsed bg-white rounded-3 tw-text-xl'
-                      type='button'
-                      data-bs-toggle='collapse'
-                      data-bs-target='#collapseFour'
-                      aria-expanded='false'
-                      aria-controls='collapseFour'
-                    >
-                      What fees should I expect?
-                    </button>
-                  </h2>
-                  <div
-                    id='collapseFour'
-                    className='accordion-collapse collapse'
-                    data-bs-parent='#accordionExample'
-                  >
-                    <div className='accordion-body'>
-                      <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className='accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid'
-                  data-aos='fade-up'
-                  data-aos-duration={900}
-                >
-                  <h2 className='accordion-header cursor-big'>
-                    <button
-                      className='accordion-button collapsed bg-white rounded-3 tw-text-xl'
-                      type='button'
-                      data-bs-toggle='collapse'
-                      data-bs-target='#collapseFive'
-                      aria-expanded='false'
-                      aria-controls='collapseFive'
-                    >
-                      What fees should I expect?
-                    </button>
-                  </h2>
-                  <div
-                    id='collapseFive'
-                    className='accordion-collapse collapse'
-                    data-bs-parent='#accordionExample'
-                  >
-                    <div className='accordion-body'>
-                      <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className='accordion-item tw-mb-6 rounded-3 bg-white border-neutral-1px-solid'
-                  data-aos='fade-up'
-                  data-aos-duration={1100}
-                >
-                  <h2 className='accordion-header cursor-big'>
-                    <button
-                      className='accordion-button collapsed bg-white rounded-3 tw-text-xl'
-                      type='button'
-                      data-bs-toggle='collapse'
-                      data-bs-target='#collapseSix'
-                      aria-expanded='false'
-                      aria-controls='collapseSix'
-                    >
-                      What fees should I expect?
-                    </button>
-                  </h2>
-                  <div
-                    id='collapseSix'
-                    className='accordion-collapse collapse'
-                    data-bs-parent='#accordionExample'
-                  >
-                    <div className='accordion-body'>
-                      <p className='fw-normal tw-text-lg text-dark-600'>
-                        To access online and mobile banking, simply log in using
-                        your registered email or phone number along with your
-                        secure password. You can use our website via any browser
-                        or download our mobile app from the App Store or Google
-                        Play.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

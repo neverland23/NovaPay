@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const TopHeaderOne: React.FC = () => {
+const TopHeader: React.FC = () => {
   return (
     <div className='bg-main-600 tw-py-205 z-1 '>
       <div className='container'>
@@ -20,7 +20,7 @@ const TopHeaderOne: React.FC = () => {
                   <i className='ph-bold ph-envelope-simple' />
                 </span>
                 <span className='text-dark-600 fw-semibold'>
-                  paynone@gmail.com
+                  support@novawave.llc
                 </span>
               </div>
             </div>
@@ -80,4 +80,4 @@ const TopHeaderOne: React.FC = () => {
   );
 };
 
-export default TopHeaderOne;
+export default TopHeader;

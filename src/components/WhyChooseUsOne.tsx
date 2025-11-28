@@ -23,7 +23,7 @@ const WhyChooseUsOne: React.FC = () => {
             data-aos='fade-up'
             data-aos-duration={800}
           >
-            Why Trust paynone For Your Payments?
+            Why Trust NovaPay For Your Payments?
           </h2>
           <p
             className='fw-normal tw-text-lg text-dark-500'

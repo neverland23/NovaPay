@@ -40,9 +40,8 @@ const AboutInner: React.FC = () => {
                 Our Mission &amp; Values
               </h4>
               <p className='fw-normal tw-text-lg text-dark-500 tw-mb-8'>
-                paynone our journey began with a vision to revolutionize banking
-                by embracing the digital age. banking experience tailored to the
-                evolving needs of our customers.
+                At NovaPay, our journey began with a clear mission: to redefine how people send, receive, and manage money across the world.
+                We are transforming traditional finance by delivering a modern, digital-first banking experience designed for today’s global users.
               </p>
               <div className='tw-mb-8'>
                 <div className='d-flex align-items-center tw-gap-2 tw-mb-3'>
@@ -50,7 +49,7 @@ const AboutInner: React.FC = () => {
                     <i className='ph ph-check-circle' />
                   </span>
                   <span className='fw-normal tw-text-lg text-dark-600'>
-                    User-Friendly Mobile App
+                    Security First
                   </span>
                 </div>
                 <div className='d-flex align-items-center tw-gap-2 tw-mb-3'>
@@ -58,7 +57,7 @@ const AboutInner: React.FC = () => {
                     <i className='ph ph-check-circle' />
                   </span>
                   <span className='fw-normal tw-text-lg text-dark-600'>
-                    Secure Online Banking
+                    Transparency
                   </span>
                 </div>
                 <div className='d-flex align-items-center tw-gap-2 tw-mb-3'>
@@ -66,7 +65,7 @@ const AboutInner: React.FC = () => {
                     <i className='ph ph-check-circle' />
                   </span>
                   <span className='fw-normal tw-text-lg text-dark-600'>
-                    Personalized Financial Solutions
+                    Innovation
                   </span>
                 </div>
                 <div className='d-flex align-items-center tw-gap-2 tw-mb-3'>
@@ -74,17 +73,9 @@ const AboutInner: React.FC = () => {
                     <i className='ph ph-check-circle' />
                   </span>
                   <span className='fw-normal tw-text-lg text-dark-600'>
-                    Assistance with Technical Issues
+                    Customer Focus
                   </span>
                 </div>
-              </div>
-              <div className='position-relative max-w-155'>
-                <Link
-                  href='/our-team'
-                  className='about-us-three-link tw-px-5 tw-py-205 bg-main-600 fw-semibold tw-text-lg text-base-two-600 rounded-3 border-two-px-solid'
-                >
-                  LEARN MORE
-                </Link>
               </div>
             </div>
           </div>
@@ -102,10 +93,10 @@ const AboutInner: React.FC = () => {
           <div className='col-xl-4'>
             <div data-aos='fade-up' data-aos-duration={1000}>
               <div className='accordion' id='accordionExampleTwo'>
-                <div className='accordion-item tw-mb-6 rounded-3 bg-main-600'>
+                <div className='accordion-item tw-mb-6 rounded-3 bg-main'>
                   <h2 className='accordion-header cursor-big position-relative'>
                     <button
-                      className='accordion-button-three bg-main-600 rounded-3 tw-text-xl text-dark-700 w-100 tw-px-6 tw-py-6 text-start'
+                      className='accordion-button-three bg-main rounded-3 tw-text-xl text-white w-100 tw-px-6 tw-py-6 text-start'
                       type='button'
                       data-bs-toggle='collapse'
                       data-bs-target='#collapseFive'
@@ -121,18 +112,16 @@ const AboutInner: React.FC = () => {
                     data-bs-parent='#accordionExampleTwo'
                   >
                     <div className='accordion-body'>
-                      <p className='fw-normal tw-text-lg text-dark-700'>
-                        paynone we are a dedicated team of financial experts
-                        committed to providing innovative, and user-friendly
-                        online banking solutions to your unique financial needs.
+                      <p className='fw-normal tw-text-lg text-white'>
+                        NovaPay was created to modernize global money movement by making fast, secure, and borderless payments accessible to everyone.
                       </p>
                     </div>
                   </div>
                 </div>
-                <div className='accordion-item tw-mb-6 rounded-3 bg-base-two-600'>
+                <div className='accordion-item tw-mb-6 rounded-3 bg-main2'>
                   <h2 className='accordion-header cursor-big position-relative'>
                     <button
-                      className='accordion-button-three collapsed bg-base-two-600 rounded-3 tw-text-xl text-white w-100 tw-px-6 tw-py-6 text-start'
+                      className='accordion-button-three collapsed bg-main2 rounded-3 tw-text-xl text-white w-100 tw-px-6 tw-py-6 text-start'
                       type='button'
                       data-bs-toggle='collapse'
                       data-bs-target='#collapseSix'
@@ -149,24 +138,22 @@ const AboutInner: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-white'>
-                        paynone we are a dedicated team of financial experts
-                        committed to providing innovative, and user-friendly
-                        online banking solutions to your unique financial needs.{" "}
+                        NovaPay is a global financial technology platform built to make international payments simple, fast, and secure for everyone.
                       </p>
                     </div>
                   </div>
                 </div>
-                <div className='accordion-item rounded-3 bg-warning-500'>
+                <div className='accordion-item rounded-3 bg-main3'>
                   <h2 className='accordion-header cursor-big position-relative'>
                     <button
-                      className='accordion-button-three collapsed bg-warning-500 rounded-3 text-dark-700 tw-text-xl w-100 tw-px-6 tw-py-6 text-start'
+                      className='accordion-button-three collapsed bg-main3 rounded-3 text-white tw-text-xl w-100 tw-px-6 tw-py-6 text-start'
                       type='button'
                       data-bs-toggle='collapse'
                       data-bs-target='#collapseSeven'
                       aria-expanded='false'
                       aria-controls='collapseSeven'
                     >
-                      Why Choose paynone
+                      Why Choose NovaPay
                     </button>
                   </h2>
                   <div
@@ -175,10 +162,8 @@ const AboutInner: React.FC = () => {
                     data-bs-parent='#accordionExampleTwo'
                   >
                     <div className='accordion-body'>
-                      <p className='fw-normal tw-text-lg text-dark-700'>
-                        paynone we are a dedicated team of financial experts
-                        committed to providing innovative, and user-friendly
-                        online banking solutions to your unique financial needs.{" "}
+                      <p className='fw-normal tw-text-lg text-white'>
+                        Choose NovaPay for fast, secure, and transparent global payments designed to simplify your financial life.
                       </p>
                     </div>
                   </div>

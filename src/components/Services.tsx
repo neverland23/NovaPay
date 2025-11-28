@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const ServicesOne: React.FC = () => {
+interface ServicesProps {
+  moreBtnHidden?: boolean | false;
+}
+
+const Services: React.FC<ServicesProps> = ({ moreBtnHidden }) => {
   return (
     <>
       <section className='py-140 z-1 overflow-hidden'>
@@ -32,28 +36,35 @@ const ServicesOne: React.FC = () => {
                 Innovative Services For Financial Success
               </h2>
             </div>
-            <div className='max-w-370'>
-              <p
-                className='fw-normal text-dark-500 tw-text-lg tw-mb-8'
-                data-aos='fade-up'
-                data-aos-duration={1000}
-              >
-                Experience cutting-edge financial maximize growth, &amp; ensure
-                long-term stability.
-              </p>
-              <div
-                className='position-relative max-w-160-px w-100'
-                data-aos='fade-up'
-                data-aos-duration={1200}
-              >
-                <Link
-                  href='/our-services'
-                  className='our-serbices-item-link fw-semibold tw-text-lg text-white tw-py-205 bg-main-gradient w-100 text-center rounded-3 hover-text-white tw-duration-500'
-                >
-                  ALL SERVICES
-                </Link>
-              </div>
-            </div>
+            {
+              moreBtnHidden
+              ? null
+              : (
+                <div className='max-w-370'>
+                  <p
+                    className='fw-normal text-dark-500 tw-text-lg tw-mb-8'
+                    data-aos='fade-up'
+                    data-aos-duration={1000}
+                  >
+                    Experience cutting-edge financial maximize growth, &amp; ensure
+                    long-term stability.
+                  </p>
+                  <div
+                    className='position-relative max-w-160-px w-100'
+                    data-aos='fade-up'
+                    data-aos-duration={1200}
+                  >
+                    <Link
+                      href='/our-services'
+                      className='our-serbices-item-link fw-semibold tw-text-lg text-white tw-py-205 bg-main-gradient w-100 text-center rounded-3 hover-text-white tw-duration-500'
+                    >
+                      ALL SERVICES
+                    </Link>
+                  </div>
+                </div>
+                )
+            }
+            
           </div>
           <div className='row gy-4'>
             <div className='col-xl-3 col-lg-4 col-md-6'>
@@ -199,4 +210,4 @@ const ServicesOne: React.FC = () => {
   );
 };
 
-export default ServicesOne;
+export default Services;

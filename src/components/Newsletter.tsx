@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const NewsletterOne: React.FC = () => {
+const Newsletter: React.FC = () => {
   return (
     <div
       className='margin-block-end--162px z-2 overflow-hidden'
@@ -72,4 +72,4 @@ const NewsletterOne: React.FC = () => {
   );
 };
 
-export default NewsletterOne;
+export default Newsletter;

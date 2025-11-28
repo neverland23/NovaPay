@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import Slider from "react-slick";
 
-const OurServicesOne: React.FC = () => {
+const OurServices: React.FC = () => {
   const settings = {
     infinite: true,
     slidesToScroll: 1,
@@ -215,4 +215,4 @@ const OurServicesOne: React.FC = () => {
   );
 };
 
-export default OurServicesOne;
+export default OurServices;

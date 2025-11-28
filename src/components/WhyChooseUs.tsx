@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const WhyChooseUsThree: React.FC = () => {
+const WhyChooseUs: React.FC = () => {
   return (
     <section className='py-140 '>
       <div className='container'>
@@ -55,11 +55,10 @@ const WhyChooseUsThree: React.FC = () => {
               </span>
               <div>
                 <h4 className='fw-normal text-dark-60 tw-mb-3 cursor-big'>
-                  Funding &amp; Investment
+                  Unlimited Payroll & Platform Payments
                 </h4>
                 <p className='fw-normal tw-text-lg text-dark-500 '>
-                  At NovaPay we excel funding &amp; investing, guiding strategic
-                  decisions.
+                  NovaPay lets you receive unlimited, compliant payroll payouts from verified employers and major platforms like Gusto, Upwork, Rippling, Fiverr, and Payoneer—giving you unrestricted access to your global earnings.
                 </p>
               </div>
             </div>
@@ -75,18 +74,17 @@ const WhyChooseUsThree: React.FC = () => {
                   <Image
                     width={40}
                     height={40}
-                    src='/assets/images/icon/why-choose-us-other-icon2.png'
+                    src='/assets/images/icon/why-choose-us-other-icon3.png'
                     alt='Image'
                   />
                 </span>
               </span>
               <div>
                 <h4 className='fw-normal text-dark-60 tw-mb-3 cursor-big'>
-                  Capital Transparency
+                  Provide Accurate Account Details
                 </h4>
                 <p className='fw-normal tw-text-lg text-dark-500 '>
-                  We prioritize capital transparency Our commitment ensures
-                  clarity.
+                  Ensure that all payments include your exact NovaPay account details, as any incorrect or incomplete information may cause the transfer to be rejected or canceled.
                 </p>
               </div>
             </div>
@@ -102,18 +100,17 @@ const WhyChooseUsThree: React.FC = () => {
                   <Image
                     width={40}
                     height={40}
-                    src='/assets/images/icon/why-choose-us-other-icon3.png'
+                    src='/assets/images/icon/why-choose-us-other-icon2.png'
                     alt='Image'
                   />
                 </span>
               </span>
               <div>
                 <h4 className='fw-normal text-dark-60 tw-mb-3 cursor-big'>
-                  Secure Investment Plan
+                  Unlimited Incoming Transfers
                 </h4>
                 <p className='fw-normal tw-text-lg text-dark-500 '>
-                  Our Secure Investment Plan at NovaPay ensures stability and
-                  growth.
+                  Enjoy unlimited incoming transactions, allowing you to receive any amount without restrictions or thresholds.
                 </p>
               </div>
             </div>
@@ -124,4 +121,4 @@ const WhyChooseUsThree: React.FC = () => {
   );
 };
 
-export default WhyChooseUsThree;
+export default WhyChooseUs;

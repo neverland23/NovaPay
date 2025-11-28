@@ -2,15 +2,15 @@ import React from "react";
 import type { Metadata } from "next";
 import AOSWrap from "@/helper/AOSWrap";
 import Preloader from "@/helper/Preloader";
-import TopHeaderOne from "@/components/TopHeaderOne";
-import HeaderOne from "@/components/HeaderOne";
+import TopHeader from "@/components/TopHeader";
+import Header from "@/components/Header";
 import BannerTwo from "@/components/BannerTwo";
 import WhyChooseUsOne from "@/components/WhyChooseUsOne";
 import NovaPayTwo from "@/components/NovaPayTwo";
 import HowItWorksOne from "@/components/HowItWorksOne";
 import OurPlatformOne from "@/components/OurPlatformOne";
 import OurPlatformTwo from "@/components/OurPlatformTwo";
-import OurServicesOne from "@/components/OurServicesOne";
+import OurServices from "@/components/OurServices";
 import OurFeaturesTwo from "@/components/OurFeaturesTwo";
 import TestimonialsTwo from "@/components/TestimonialsTwo";
 import FAQTwo from "@/components/FAQTwo";
@@ -46,11 +46,11 @@ const Page: React.FC = () => {
       {/* <Preloader /> */}
       <Preloader />
 
-      {/* TopHeaderOne */}
-      <TopHeaderOne />
+      {/* TopHeader */}
+      <TopHeader />
 
-      {/* HeaderOne */}
-      <HeaderOne />
+      {/* Header */}
+      <Header />
 
       {/* BannerTwo */}
       <BannerTwo />
@@ -72,8 +72,8 @@ const Page: React.FC = () => {
       {/* OurPlatformTwo */}
       <OurPlatformTwo />
 
-      {/* OurServicesOne */}
-      <OurServicesOne />
+      {/* OurServices */}
+      <OurServices />
 
       {/* OurFeaturesTwo */}
       <OurFeaturesTwo />

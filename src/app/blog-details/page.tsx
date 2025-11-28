@@ -2,8 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 import AOSWrap from "@/helper/AOSWrap";
 import Preloader from "@/helper/Preloader";
-import TopHeaderOne from "@/components/TopHeaderOne";
-import HeaderOne from "@/components/HeaderOne";
+import TopHeader from "@/components/TopHeader";
+import Header from "@/components/Header";
 
 import Breadcrumb from "@/components/Breadcrumb";
 import BlogDetailsInner from "@/components/BlogDetailsInner";
@@ -39,9 +39,9 @@ const Page: React.FC = () => {
       {/* <Preloader /> */}
       <Preloader />
       {/* TopHeaderTwo */}
-      <TopHeaderOne />
+      <TopHeader />
       {/* HeaderTwo */}
-      <HeaderOne />
+      <Header />
       {/* Breadcrumb */}
       <Breadcrumb title={"Blog Details"} />
       {/* BlogDetailsInner */}

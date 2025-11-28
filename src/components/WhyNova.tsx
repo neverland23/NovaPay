@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const NovapayOne: React.FC = () => {
+const WhyNova: React.FC = () => {
   return (
     <section className='z-1 bg-neutral-10 py-140 position-relative overflow-hidden'>
       <div className='container'>
@@ -146,4 +146,4 @@ const NovapayOne: React.FC = () => {
   );
 };
 
-export default NovapayOne;
+export default WhyNova;

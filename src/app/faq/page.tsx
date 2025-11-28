@@ -2,22 +2,22 @@ import React from "react";
 import type { Metadata } from "next";
 import AOSWrap from "@/helper/AOSWrap";
 import Preloader from "@/helper/Preloader";
-import TopHeaderOne from "@/components/TopHeaderOne";
-import HeaderOne from "@/components/HeaderOne";
+import TopHeader from "@/components/TopHeader";
+import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
-import NewsletterTwo from "@/components/NewsletterTwo";
-import FooterThree from "@/components/FooterThree";
-import FAQOne from "@/components/FAQOne";
+import Newsletter from "@/components/Newsletter";
+import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Faq | NovaPay Money Exchange Next JS Template",
+    title: "Faq | NovaPay",
     description:
-      "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+      "This is NovaPay FAQ",
     openGraph: {
       title: "Faq | NovaPay",
       description:
-        "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+        "This is NovaPay FAQ",
       url: "https://nextjs.novapay.wowtheme7.com/faq",
       type: "website",
       images: [
@@ -39,22 +39,22 @@ const Page: React.FC = () => {
       <Preloader />
 
       {/* TopHeaderTwo */}
-      <TopHeaderOne />
+      <TopHeader />
 
       {/* HeaderTwo */}
-      <HeaderOne />
+      <Header />
 
       {/* Breadcrumb */}
       <Breadcrumb title={"FAQ"} />
 
-      {/* FAQOne */}
-      <FAQOne />
+      {/* FAQ */}
+      <FAQ />
 
       {/* NewsletterTwo */}
-      <NewsletterTwo />
+      <Newsletter />
 
       {/* FooterThree */}
-      <FooterThree />
+      <Footer />
     </AOSWrap>
   );
 };

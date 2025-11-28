@@ -9,7 +9,7 @@ import BrandSliderOne from "@/components/BrandSliderOne";
 import GlobalPaymentsOne from "@/components/GlobalPaymentsOne";
 import OurFeatureTwo from "@/components/OurFeatureTwo";
 import PaymentSolutionOne from "@/components/PaymentSolutionOne";
-import WhyChooseUsThree from "@/components/WhyChooseUsThree";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import PaymentMethodTwo from "@/components/PaymentMethodTwo";
 import PricingPlanTwo from "@/components/PricingPlanTwo";
 import TeamMemberOne from "@/components/TeamMemberOne";
@@ -68,8 +68,8 @@ const Page: React.FC = () => {
       {/* PaymentSolutionOne */}
       <PaymentSolutionOne />
 
-      {/* WhyChooseUsThree */}
-      <WhyChooseUsThree />
+      {/* WhyChooseUs */}
+      <WhyChooseUs />
 
       {/* PaymentMethodTwo */}
       <PaymentMethodTwo />

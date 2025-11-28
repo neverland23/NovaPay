@@ -10,7 +10,7 @@ import OurFeaturesThree from "@/components/OurFeaturesThree";
 import OurBankOne from "@/components/OurBankOne";
 import AboutUsThree from "@/components/AboutUsThree";
 import MobileOne from "@/components/MobileOne";
-import PricingPlanOne from "@/components/PricingPlanOne";
+import PricingPlan from "@/components/PricingPlan";
 import TestimonialsThree from "@/components/TestimonialsThree";
 import FAQThree from "@/components/FAQThree";
 import PaymentOne from "@/components/PaymentOne";
@@ -71,8 +71,8 @@ const Page: React.FC = () => {
       {/* MobileOne */}
       <MobileOne />
 
-      {/* PricingPlanOne */}
-      <PricingPlanOne />
+      {/* PricingPlan */}
+      <PricingPlan />
 
       {/* TestimonialsThree */}
       <TestimonialsThree />
