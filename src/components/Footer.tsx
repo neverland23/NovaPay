@@ -134,8 +134,27 @@ const Footer: React.FC = () => {
                   (872) 217-3342
                 </h5>
                 <span className='tw-text-lg fw-normal text-neutral-10'>
-                  jhmun023216@gmail.com
+                  support@novapay.co
                 </span>
+              </div>
+            </div>
+            <div className='col-lg-12 col-md-12 col-sm-12'>
+              <div
+                className='d-flex align-items-center justify-content-center'
+              >
+                <Link
+                  href={"/terms-of-service"}
+                  className='text-white fw-semibold d-block tw-py-2 tw-px-305 tw-rounded'
+                >
+                  Terms of Service
+                </Link>
+                <span className='text-white fw-semibold d-block tw-py-2 tw-px-305 tw-rounded'>|</span>
+                <Link
+                  href={"/privacy-policy"}
+                  className='text-white fw-semibold d-block tw-py-2 tw-px-305 tw-rounded'
+                >
+                  Privacy Policy
+                </Link>
               </div>
             </div>
           </div>

@@ -20,7 +20,7 @@ const TopHeader: React.FC = () => {
                   <i className='ph-bold ph-envelope-simple' />
                 </span>
                 <span className='text-dark-600 fw-semibold'>
-                  support@novawave.llc
+                  support@novapay.co
                 </span>
               </div>
             </div>

@@ -3,16 +3,16 @@ import Link from "next/link";
 const SignUpInner: React.FC = () => {
   return (
     <section className='position-relative'>
-      <div className='d-flex'>
+      <div className='d-flex tw-h-screen'>
         <div className='flex-grow-1'>
           <div className='max-w-526-px w-100 log-in-card tw-px-6 tw-py-12 mx-auto'>
-            <Link href='/' className='tw-mb-188-px'>
+            <Link href='/' className='tw-mb-17'>
               <Image
+                src='/assets/images/logo/logo.png'
+                alt='img'
+                className='tw-h-13'
                 width={171}
-                height={40}
-                src='/assets/images/logo/logo2.png'
-                alt='Image'
-                className=''
+                height={52}
               />
             </Link>
             <h4 className='fw-medium text-primary-50 tw-mb-8'>
@@ -106,7 +106,7 @@ const SignUpInner: React.FC = () => {
                   </label>
                 </div>
               </div>
-              <button className='text-white bg-base-two-600 w-100 tw-py-3 rounded-3 text-center tw-mb-3'>
+              <button className='text-white bg-main-gradient w-100 tw-py-3 rounded-3 text-center tw-mb-3'>
                 Sign Up
               </button>
               <span className='fw-semibold tw-text-4 text-primary-50 text-center justify-content-center d-flex'>

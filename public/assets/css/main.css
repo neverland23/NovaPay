@@ -10888,4 +10888,14 @@ button.show {
   background-color: #00000098;
 }
 
+/* ========================== Others =========================== */
+
+.dot-item::before {
+  content: "• ";
+  margin-right: 6px;
+}
+.dot-item {
+  display: block; /* makes each appear like a list item */
+}
+
 /*# sourceMappingURL=main.css.map */

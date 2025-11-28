@@ -6,13 +6,13 @@ import SignUpInner from "@/components/SignUpInner";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Sign-up | NovaPay Money Exchange Next JS Template",
+    title: "Sign-up | NovaPay",
     description:
-      "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+      "This is NovaPay Sign UP",
     openGraph: {
       title: "Sign-up | NovaPay",
       description:
-        "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+        "This is NovaPay Sign UP",
       url: "https://nextjs.novapay.wowtheme7.com/sign-up",
       type: "website",
       images: [

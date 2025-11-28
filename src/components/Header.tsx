@@ -6,7 +6,13 @@ import Image from "next/image";
 
 const Header: React.FC = () => {
   const pathname = usePathname();
-  const MENU = [
+
+  interface NavItem {
+    label: string;
+    to?: string;
+    children?: NavItem[];
+  }
+  const MENU: NavItem[] = [
     { label: "Our Services", to: "/our-services" },
     { label: "Pricing Plan", to: "/pricing-plan" },
     { label: "FAQ", to: "/faq" },
@@ -97,7 +103,7 @@ const Header: React.FC = () => {
                         </Link>
                       ) : (
                         <Link
-                          href={item.to}
+                          href={item.to ?? "#"}
                           className='nav-menu__link text-white tw-py-9 fw-semibold w-100'
                         >
                           {item.label}
@@ -114,7 +120,7 @@ const Header: React.FC = () => {
                               }`}
                             >
                               <Link
-                                href={sub.to}
+                                href={sub.to ?? "#"}
                                 className='nav-submenu__link hover-bg-neutral-100 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded hover-bg-main-100'
                               >
                                 {sub.label}
@@ -145,7 +151,7 @@ const Header: React.FC = () => {
                       href='/sign-up'
                       className='header-item-link text-white fw-semibold tw-text-lg tw-px-4 tw-py-2 bg-main-gradient border-two-px-solid rounded-2 hover-text-white'
                     >
-                      SIGN IN
+                      SIGN UP
                     </Link>
                   </div>
                 </div>
@@ -209,7 +215,7 @@ const Header: React.FC = () => {
                       </button>
                     ) : (
                       <Link
-                        href={item.to}
+                        href={item.to ?? "#"}
                         className='nav-menu__link text-heading tw-py-9 fw-semibold w-100 text-white'
                       >
                         {item.label}
@@ -231,7 +237,7 @@ const Header: React.FC = () => {
                             }`}
                           >
                             <Link
-                              href={sub.to}
+                              href={sub.to ?? "#"}
                               className='nav-submenu__link hover-bg-neutral-200 text-heading fw-semibold w-100 d-block tw-py-2 tw-px-305 tw-rounded'
                             >
                               {sub.label}
