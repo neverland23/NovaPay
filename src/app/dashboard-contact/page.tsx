@@ -2,15 +2,15 @@ import React from "react";
 import type { Metadata } from "next";
 import AOSWrap from "@/helper/AOSWrap";
 import DashboardLayout from "@/layout/DashboardLayout";
-import DashboardProfileCompleteness from "@/components/DashboardProfileCompleteness";
+import DashboardContactUs from "@/components/DashboardContactUs";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Dashboard | NovaPay",
+    title: "Contact Us | NovaPay",
     description:
-      "This is NovaPay Dashboard",
+      "This is NovaPay Contact Us",
     openGraph: {
-      title: "Dashboard | NovaPay",
+      title: "Contact Us | NovaPay",
       description:
         "This is NovaPay Dashboard",
       url: "https://nextjs.novapay.wowtheme7.com/dashboard",
@@ -31,8 +31,8 @@ const Page: React.FC = () => {
   return (
     <AOSWrap>
       <DashboardLayout>
-        {/* DashboardProfileCompleteness */}
-        <DashboardProfileCompleteness />
+        {/* DashboardContactUs */}
+        <DashboardContactUs />
       </DashboardLayout>
     </AOSWrap>
   );

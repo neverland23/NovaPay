@@ -31,36 +31,17 @@ const DashboardHeader: React.FC = () => {
         <div className='container'>
           <div className='d-flex align-items-center tw-gap-6 justify-content-between'>
             <div className='d-flex align-items-center w-100 tw-gap-6 max-w-885-px'>
-              <Link href='/'>
+              <Link href='/dashboard'>
                 <Image
+                  src='/assets/images/logo/logo.png'
+                  alt='img'
+                  className='tw-h-13'
                   width={171}
-                  height={40}
-                  src='/assets/images/logo/logo2.png'
-                  alt='Image'
+                  height={52}
                 />
               </Link>
-
-              <div className='position-relative max-w-664px w-100 d-lg-block d-none '>
-                <input
-                  name='search'
-                  type='text'
-                  placeholder='Search'
-                  className='tw-pe-10 tw-ps-6 tw-py-4 bg-neutral-10 w-100 focus-visible-border-main-600 border-0 tw-text-4 text-dark-500 fw-normal rounded-pill'
-                />
-                <button className='tw-text-6 text-dark-600 position-absolute tw-end-1 tw-block-start-50 top-50 translate-middle'>
-                  <i className='ph ph-magnifying-glass' />
-                </button>
-              </div>
             </div>
             <div className='d-flex align-items-center tw-gap-6 '>
-              <select className='fw-semibold tw-text-4 text-dark-600 border-0 focus-border-none d-sm-block d-none'>
-                <option value={1}>ENG</option>
-                <option value={2}>Spanish</option>
-                <option value={3}>Bangla</option>
-                <option value={4}>German</option>
-                <option value={5}>Chinese</option>
-                <option value={6}>Korean</option>
-              </select>
               {/* Notification Start */}
               <div className='dropdown'>
                 <button
@@ -245,27 +226,18 @@ const DashboardHeader: React.FC = () => {
                   data-bs-toggle='dropdown'
                   aria-expanded='false'
                 >
-                  <span className='position-relative tw-w-15 tw-h-15 flex-shrink-0'>
-                    <Image
-                      width={60}
-                      height={60}
-                      src='/assets/images/thumbs/my-profile-img1.png'
-                      alt='Image'
-                      className=''
-                    />
+                  <span className='position-relative tw-w-15 tw-h-15 tw-text-10 flex-shrink-0 rounded-circle bg-main-gradient'>
+                    <i className='ph ph-user' />
                   </span>
                 </button>
                 <div className='dropdown-menu dropdown-menu--lg border-0 bg-transparent p-0'>
                   <div className='card border border-gray-100 tw-rounded-xl box-shadow-custom'>
                     <div className='card-body'>
                       <div className='d-flex align-items-center tw-gap-2 tw-mb-5 tw-pb-5 border-bottom border-gray-100'>
-                        <Image
-                          width={60}
-                          height={60}
-                          src='/assets/images/thumbs/my-profile-img1.png'
-                          alt='Image'
-                          className=' rounded-circle'
-                        />
+                        <span className='tw-text-10'>
+                          <i className='ph ph-user' />
+                        </span>
+                        <br/>
                         <div className=''>
                           <h4 className='mb-0 fw-normal '>Michel John</h4>
                           <p className='fw-medium tw-text-4 text-neutral-200 fw-semibold'>
@@ -273,7 +245,7 @@ const DashboardHeader: React.FC = () => {
                           </p>
                         </div>
                       </div>
-                      <ul className='tw-h-270-px overflow-y-auto scroll-sm pe-4'>
+                      <ul className='overflow-y-auto scroll-sm pe-4'>
                         <li className='tw-mb-1'>
                           <Link
                             href='/my-profile'
@@ -295,28 +267,6 @@ const DashboardHeader: React.FC = () => {
                             </span>
                             <span className='text'>Upgrade Plan</span>
                           </Link>
-                        </li>
-                        <li className='tw-mb-1'>
-                          <a
-                            href='#'
-                            className='tw-py-3 tw-text-4 tw-px-5 hover-bg-gray-50 text-neutral-300 tw-rounded-lg d-flex align-items-center tw-gap-2 fw-semibold tw-text-4'
-                          >
-                            <span className='tw-text-2xl text-primary-600 d-flex'>
-                              <i className='ph ph-chats-teardrop' />
-                            </span>
-                            <span className='text'>Inbox</span>
-                          </a>
-                        </li>
-                        <li className='tw-mb-1'>
-                          <a
-                            href='#'
-                            className='tw-py-3 tw-text-4 tw-px-5 hover-bg-gray-50 text-neutral-300 tw-rounded-lg d-flex align-items-center tw-gap-2 fw-semibold tw-text-4'
-                          >
-                            <span className='tw-text-2xl text-primary-600 d-flex'>
-                              <i className='ph ph-envelope-simple' />
-                            </span>
-                            <span className='text'>Email</span>
-                          </a>
                         </li>
                         <li className='tw-pt-2 border-top border-gray-100'>
                           <Link

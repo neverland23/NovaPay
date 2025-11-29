@@ -1575,6 +1575,10 @@ input:focus-visible {
   background-color: var(--danger-900) !important;
 }
 
+.hover-bg-main-gradient:hover {
+  background: linear-gradient(90deg, hsl(var(--main)), hsl(var(--main2))) !important;
+}
+
 .hover-bg-main-50:hover {
   background-color: var(--main-50) !important;
 }
@@ -3470,6 +3474,10 @@ input:focus-visible {
 
 .tw-text-17 {
   font-size: 4.25rem;
+}
+
+.tw-text-123px {
+  font-size: 123px;
 }
 
 .tw-text-140-px {
@@ -10015,7 +10023,7 @@ input:focus-visible {
 }
 
 .header-nav-menu__item .activePage .header-nav-submenu__link {
-  background-color: #104042 !important;
+  background: linear-gradient(90deg, hsl(var(--main)), hsl(var(--main2))) !important;
   color: #ffffff;
   border-radius: 12px;
 }
@@ -10888,14 +10896,26 @@ button.show {
   background-color: #00000098;
 }
 
-/* ========================== Others =========================== */
-
 .dot-item::before {
   content: "• ";
   margin-right: 6px;
 }
+
 .dot-item {
   display: block; /* makes each appear like a list item */
 }
+
+/*=================== blog list css start ========================*/
+
+.dashboard-contact .contact-section {
+  background-color: white !important;
+  -webkit-padding-before: 40px;
+  padding-block-start: 40px;
+  -webkit-padding-after: 40px;
+  padding-block-end: 40px;
+  border-radius: var(--bs-border-radius-lg) !important;
+}
+
+/*=================== blog list css end ========================*/
 
 /*# sourceMappingURL=main.css.map */

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ContactInner: React.FC = () => {
   return (
-    <section className='bg-neutral-10 py-140 '>
+    <section className='bg-neutral-10 py-140 contact-section'>
       <div className='container'>
         <div className='row gy-4 tw-mb-15'>
           <div className='col-lg-4 col-md-6'>

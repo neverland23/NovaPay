@@ -6,13 +6,13 @@ import DashboardWithdrawMoney from "@/components/DashboardWithdrawMoney";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Withdraw-money | NovaPay Money Exchange Next JS Template",
+    title: "Withdraw Money | NovaPay",
     description:
-      "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+      "This is NovaPay Withdraw Money",
     openGraph: {
-      title: "Withdraw-money | NovaPay",
+      title: "Withdraw Money | NovaPay",
       description:
-        "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+        "This is NovaPay Withdraw Money",
       url: "https://nextjs.novapay.wowtheme7.com/withdraw-money",
       type: "website",
       images: [
