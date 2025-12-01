@@ -81,11 +81,19 @@ You need to collect the following information from Vercel:
 3. Click **"New repository secret"**
 4. Add the following secrets:
 
+#### Required Vercel Secrets:
 | Secret Name | Value | Description |
 |------------|-------|-------------|
 | `VERCEL_TOKEN` | Your Vercel token | Authentication token for Vercel API |
 | `VERCEL_ORG_ID` | Your Organization ID | Your Vercel organization identifier |
 | `VERCEL_PROJECT_ID` | Your Project ID | Your Vercel project identifier |
+
+#### Required Environment Variables (for Build):
+| Secret Name | Value | Description |
+|------------|-------|-------------|
+| `NEXT_PUBLIC_APP_URL` | Your production URL | Public app URL (e.g., `https://your-app.vercel.app`) |
+
+**Note**: `NEXT_PUBLIC_APP_URL` is required in GitHub Secrets because it's used during the build process. Other environment variables (like `MONGODB_URI`, `JWT_SECRET`, etc.) should be added to **Vercel** (not GitHub Secrets) as they're only needed at runtime.
 
 ### Step 2: Verify Secrets
 
@@ -150,26 +158,50 @@ The workflow will automatically trigger and deploy to Vercel.
 
 ## Environment Variables
 
-### Setting Environment Variables in Vercel
+### Understanding Environment Variables
 
-You need to configure environment variables for your Vercel project:
+There are **two places** where environment variables need to be configured:
+
+1. **GitHub Secrets** - For variables needed during the build process (in GitHub Actions)
+2. **Vercel Environment Variables** - For variables needed at runtime (in your deployed app)
+
+### Variables in GitHub Secrets
+
+**Only `NEXT_PUBLIC_*` variables** need to be in GitHub Secrets because they're embedded into the build at build time:
+
+- ✅ `NEXT_PUBLIC_APP_URL` - Must be in GitHub Secrets (used during build)
+
+**Why?** Variables prefixed with `NEXT_PUBLIC_` are embedded into your JavaScript bundle during the build process. Since we're building in GitHub Actions, this variable must be available during the build step.
+
+**Alternative Approach**: If you prefer, you can remove the build step from GitHub Actions and let Vercel handle the build entirely. In that case, you only need Vercel secrets (VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID) in GitHub, and all environment variables would go in Vercel. However, the current setup allows you to catch build errors before deploying.
+
+### Variables in Vercel
+
+**All environment variables** (including `NEXT_PUBLIC_APP_URL`) should be added to Vercel for runtime:
 
 1. Go to your project in Vercel
 2. Navigate to **Settings** → **Environment Variables**
 3. Add all required environment variables
 4. Select environment: **Production** (or **Preview** if needed)
 
-### Common Environment Variables
+### Required Environment Variables for Vercel
 
-Based on your project structure, you may need:
-- `MONGODB_URI` - MongoDB connection string
-- `JWT_SECRET` - JWT signing secret
-- `JWT_REFRESH_SECRET` - JWT refresh token secret
-- `AUTH_SECRET` or `NEXTAUTH_SECRET` - NextAuth secret
-- `NEXTAUTH_URL` or `NEXT_PUBLIC_APP_URL` - Your application URL
-- `GOOGLE_CLIENT_ID` - Google OAuth client ID
-- `GOOGLE_CLIENT_SECRET` - Google OAuth client secret
-- Any other API keys or secrets your application requires
+Based on your project structure, add these to Vercel:
+
+| Variable Name | Description | Example |
+|--------------|-------------|---------|
+| `MONGODB_URI` | MongoDB connection string | `mongodb+srv://...` |
+| `JWT_SECRET` | JWT signing secret | (32+ character random string) |
+| `JWT_REFRESH_SECRET` | JWT refresh token secret | (32+ character random string) |
+| `AUTH_SECRET` | Auth secret key | (32+ character random string) |
+| `GOOGLE_CLIENT_ID` | Google OAuth client ID | `xxx.apps.googleusercontent.com` |
+| `GOOGLE_CLIENT_SECRET` | Google OAuth client secret | (Google OAuth secret) |
+| `NEXT_PUBLIC_APP_URL` | Your production app URL | `https://your-app.vercel.app` |
+
+**Important**: 
+- Add `NEXT_PUBLIC_APP_URL` to **both** GitHub Secrets (for build) **and** Vercel (for runtime)
+- All other variables should **only** be in Vercel (not GitHub Secrets)
+- Use your actual production URL for `NEXT_PUBLIC_APP_URL` (e.g., `https://novapay.vercel.app`)
 
 ---
 
@@ -287,8 +319,9 @@ To ensure code quality, set up branch protection rules for `master`:
 - [ ] Get VERCEL_TOKEN from Vercel
 - [ ] Get VERCEL_ORG_ID from Vercel
 - [ ] Get VERCEL_PROJECT_ID from Vercel project
-- [ ] Add all three secrets to GitHub repository
-- [ ] Configure environment variables in Vercel
+- [ ] Add Vercel secrets to GitHub (VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID)
+- [ ] Add NEXT_PUBLIC_APP_URL to GitHub Secrets
+- [ ] Configure all environment variables in Vercel (MONGODB_URI, JWT_SECRET, etc.)
 - [ ] Push to master branch to trigger first deployment
 - [ ] Verify deployment in Vercel dashboard
 

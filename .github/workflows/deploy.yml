@@ -38,6 +38,8 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          # NEXT_PUBLIC_* variables are needed at build time
+          NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
