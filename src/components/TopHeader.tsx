@@ -25,7 +25,7 @@ const TopHeader: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className='top-header-item d-flex align-items-center tw-gap-15 flex-wrap'>
+          {/* <div className='top-header-item d-flex align-items-center tw-gap-15 flex-wrap'>
             <div>
               <ul className='d-flex align-items-center tw-gap-5 flex-wrap'>
                 <li>
@@ -73,7 +73,7 @@ const TopHeader: React.FC = () => {
                 <option value={1}>CAN</option>
               </select>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

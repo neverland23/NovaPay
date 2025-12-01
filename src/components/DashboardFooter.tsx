@@ -6,10 +6,9 @@ const DashboardFooter: React.FC = () => {
       <div className='container'>
         <div className='d-flex align-items-center tw-gap-6 justify-content-between flex-wrap'>
           <p className='text-dark-600 fw-normal tw-text-lg '>
-            Copyright @ {new Date().getFullYear()} paynone Designed By
-            <span className='text-primary-600'>wowtheme7</span>
+            Copyright @ {new Date().getFullYear()} NovaPay
           </p>
-          <ul className='d-flex align-items-center tw-gap-2 flex-wrap'>
+          {/* <ul className='d-flex align-items-center tw-gap-2 flex-wrap'>
             <li>
               <Link
                 href='https://www.facebook.com'
@@ -42,15 +41,7 @@ const DashboardFooter: React.FC = () => {
                 <i className='ph ph-linkedin-logo' />
               </Link>
             </li>
-          </ul>
-          <div className='d-flex align-items-center tw-gap-6 flex-wrap'>
-            <Link href='#' className='fw-normal tw-text-lg text-dark-500'>
-              Privacy policy
-            </Link>
-            <Link href='#' className='fw-normal tw-text-lg text-dark-500'>
-              Terms of condition
-            </Link>
-          </div>
+          </ul> */}
         </div>
       </div>
     </div>

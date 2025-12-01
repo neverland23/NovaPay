@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                 <p className='fw-normal tw-text-lg text-neutral-10 tw-mb-8'>
                   Next-level payment infrastructure for instant, secure, and global transactions.
                 </p>
-                <ul className='d-flex align-items-center tw-gap-5'>
+                {/* <ul className='d-flex align-items-center tw-gap-5'>
                   <li>
                     <a href='https://www.facebook.com'>
                       <Image
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
                       />
                     </a>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
             <div className='col-lg-4 col-md-4 col-sm-12'>

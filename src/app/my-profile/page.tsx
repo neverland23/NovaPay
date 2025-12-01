@@ -6,13 +6,13 @@ import DashboardMyProfile from "@/components/DashboardMyProfile";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "My-profile | NovaPay Money Exchange Next JS Template",
+    title: "Dashboard - My Profile | NovaPay",
     description:
-      "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+      "This is NovaPay Dashboard My Profile",
     openGraph: {
-      title: "My-profile | NovaPay",
+      title: "Dashboard - My Profile | NovaPay",
       description:
-        "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+        "This is NovaPay Dashboard My Profile",
       url: "https://nextjs.novapay.wowtheme7.com/my-profile",
       type: "website",
       images: [
