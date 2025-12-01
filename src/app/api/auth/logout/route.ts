@@ -7,7 +7,7 @@ import { verifyRefreshToken } from '@/lib/jwt';
 
 export async function POST(request: NextRequest) {
   try {
-    const refreshToken = getRefreshTokenFromCookie(request);
+    const refreshToken = await getRefreshTokenFromCookie(request);
 
     if (refreshToken) {
       try {

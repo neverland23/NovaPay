@@ -33,22 +33,23 @@ export const clearAuthCookies = (response: NextResponse) => {
   return response;
 };
 
-export const getAccessTokenFromCookie = (request?: NextRequest): string | null => {
+export const getAccessTokenFromCookie = async (request?: NextRequest): Promise<string | null> => {
   if (request) {
     return request.cookies.get(ACCESS_TOKEN_COOKIE)?.value || null;
   }
   
-  // Server-side usage with cookies()
-  const cookieStore = cookies();
+  // Server-side usage with cookies() - Next.js 15 returns a Promise
+  const cookieStore = await cookies();
   return cookieStore.get(ACCESS_TOKEN_COOKIE)?.value || null;
 };
 
-export const getRefreshTokenFromCookie = (request?: NextRequest): string | null => {
+export const getRefreshTokenFromCookie = async (request?: NextRequest): Promise<string | null> => {
   if (request) {
     return request.cookies.get(REFRESH_TOKEN_COOKIE)?.value || null;
   }
   
-  const cookieStore = cookies();
+  // Server-side usage with cookies() - Next.js 15 returns a Promise
+  const cookieStore = await cookies();
   return cookieStore.get(REFRESH_TOKEN_COOKIE)?.value || null;
 };
 

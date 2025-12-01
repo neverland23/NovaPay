@@ -16,11 +16,11 @@ export async function authenticateUser(request: NextRequest): Promise<{
   error: string | null;
 }> {
   try {
-    const accessToken = getAccessTokenFromCookie(request);
+    const accessToken = await getAccessTokenFromCookie(request);
 
     if (!accessToken) {
       // Try refresh token
-      const refreshToken = getRefreshTokenFromCookie(request);
+      const refreshToken = await getRefreshTokenFromCookie(request);
       
       if (!refreshToken) {
         return { user: null, error: 'No authentication token found' };
