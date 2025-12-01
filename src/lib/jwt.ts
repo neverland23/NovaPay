@@ -1,10 +1,10 @@
-import jwt from 'jsonwebtoken';
+import jwt, { SignOptions } from 'jsonwebtoken';
 import { Types } from 'mongoose';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
-const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET || 'your-refresh-secret-key-change-in-production';
-const JWT_EXPIRE = process.env.JWT_EXPIRE || '15m';
-const JWT_REFRESH_EXPIRE = process.env.JWT_REFRESH_EXPIRE || '7d';
+const JWT_SECRET: string = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
+const JWT_REFRESH_SECRET: string = process.env.JWT_REFRESH_SECRET || 'your-refresh-secret-key-change-in-production';
+const JWT_EXPIRE: string = process.env.JWT_EXPIRE || '15m';
+const JWT_REFRESH_EXPIRE: string = process.env.JWT_REFRESH_EXPIRE || '7d';
 
 export interface TokenPayload {
   userId: string;
@@ -12,15 +12,17 @@ export interface TokenPayload {
 }
 
 export const generateAccessToken = (payload: TokenPayload): string => {
-  return jwt.sign(payload, JWT_SECRET, {
+  const options: SignOptions = {
     expiresIn: JWT_EXPIRE,
-  });
+  };
+  return jwt.sign(payload, JWT_SECRET, options);
 };
 
 export const generateRefreshToken = (payload: TokenPayload): string => {
-  return jwt.sign(payload, JWT_REFRESH_SECRET, {
+  const options: SignOptions = {
     expiresIn: JWT_REFRESH_EXPIRE,
-  });
+  };
+  return jwt.sign(payload, JWT_REFRESH_SECRET, options);
 };
 
 export const verifyAccessToken = (token: string): TokenPayload => {
@@ -40,9 +42,10 @@ export const verifyRefreshToken = (token: string): TokenPayload => {
 };
 
 export const generatePasswordResetToken = (): string => {
-  return jwt.sign({ type: 'password-reset' }, JWT_SECRET, {
+  const options: SignOptions = {
     expiresIn: '1h',
-  });
+  };
+  return jwt.sign({ type: 'password-reset' }, JWT_SECRET, options);
 };
 
 export const verifyPasswordResetToken = (token: string): boolean => {
