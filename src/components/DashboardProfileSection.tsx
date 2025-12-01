@@ -1,8 +1,11 @@
 "use client";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import type { ReactNode } from "react";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { logout, fetchUserSession, setUser } from "@/redux/features/authSlice";
+import { toast } from "react-toastify";
 
 interface DashboardProfileProps {
   children: ReactNode;
@@ -14,12 +17,44 @@ const DashboardProfileSection: React.FC<DashboardProfileProps> = ({
   const pathname = usePathname();
 
   const [active, setActive] = useState(false);
+  const [isLoggingOut, setIsLoggingOut] = useState<boolean>(false);
+  const hasFetchedSessionRef = useRef<boolean>(false);
 
   const router = useRouter();
+  const dispatch = useAppDispatch();
+  const { user, isAuthenticated } = useAppSelector((state) => state.auth);
 
   const handleRedirectToMyProfile = () => {
     router.push("/my-profile");
   };
+
+  const handleLogout = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsLoggingOut(true);
+    
+    // Immediately clear user state to prevent session fetching
+    dispatch(setUser(null));
+    
+    // Call logout API (fire and forget)
+    dispatch(logout()).catch(() => {
+      // Ignore errors - we're redirecting anyway
+    });
+    
+    // Use window.location for immediate hard redirect to prevent any further execution
+    window.location.href = "/log-in";
+  };
+
+  // Fetch user session on mount if not already loaded
+  // Only fetch once to prevent infinite loops
+  useEffect(() => {
+    if (!hasFetchedSessionRef.current && !user && !isLoggingOut) {
+      hasFetchedSessionRef.current = true;
+      dispatch(fetchUserSession()).catch(() => {
+        // If session fetch fails, user is not authenticated - don't retry
+        hasFetchedSessionRef.current = false; // Reset on error so we can try again later
+      });
+    }
+  }, [dispatch, user, isLoggingOut]);
 
   return (
     <section className='bg-neutral-10 z-1 '>
@@ -50,10 +85,10 @@ const DashboardProfileSection: React.FC<DashboardProfileProps> = ({
               </div>
               <div className='text-center justify-content-center'>
                 <h4 className='fw-normal text-dark-600 tw-mb-2'>
-                  Leslie Alexander
+                  {user?.name || "User"}
                 </h4>
                 <span className='fw-normal tw-text-4 text-dark-500 '>
-                  Brooklyn, NY, USA
+                  {user?.email || "user@example.com"}
                 </span>
               </div>
             </div>
@@ -137,15 +172,15 @@ const DashboardProfileSection: React.FC<DashboardProfileProps> = ({
                   </Link>
                 </li>
                 <li className='header-nav-submenu__item'>
-                  <Link
-                    href='/log-in'
-                    className='header-nav-submenu__link fw-normal tw-text-lg text-dark-600 d-flex align-items-center tw-gap-2 hover-text-white bg-neutral-10 tw-px-3 tw-py-3 rounded-3 hover-bg-main-gradient tw-duration-400'
+                  <button
+                    onClick={handleLogout}
+                    className='header-nav-submenu__link fw-normal tw-text-lg text-dark-600 d-flex align-items-center tw-gap-2 hover-text-white bg-neutral-10 tw-px-3 tw-py-3 rounded-3 hover-bg-main-gradient tw-duration-400 w-100 border-0 bg-transparent text-start'
                   >
                     <span className='tw-text-6'>
                       <i className='ph ph-sign-out' />
                     </span>
                     Log Out
-                  </Link>
+                  </button>
                 </li>
               </ul>
             </div>

@@ -1,10 +1,19 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { useRouter } from "next/navigation";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { logout, fetchUserSession, setUser } from "@/redux/features/authSlice";
+import { toast } from "react-toastify";
 
 const DashboardHeader: React.FC = () => {
   const [scroll, setScroll] = useState<boolean>(false);
+  const [isLoggingOut, setIsLoggingOut] = useState<boolean>(false);
+  const hasFetchedSessionRef = useRef<boolean>(false);
+  const router = useRouter();
+  const dispatch = useAppDispatch();
+  const { user, isAuthenticated } = useAppSelector((state) => state.auth);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +31,34 @@ const DashboardHeader: React.FC = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Fetch user session on mount if not already loaded
+  // Only fetch once to prevent infinite loops
+  useEffect(() => {
+    if (!hasFetchedSessionRef.current && !user && !isLoggingOut) {
+      hasFetchedSessionRef.current = true;
+      dispatch(fetchUserSession()).catch(() => {
+        // If session fetch fails, user is not authenticated - don't retry
+        hasFetchedSessionRef.current = false; // Reset on error so we can try again later
+      });
+    }
+  }, [dispatch, user, isLoggingOut]);
+
+  const handleLogout = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsLoggingOut(true);
+    
+    // Immediately clear user state to prevent session fetching
+    dispatch(setUser(null));
+    
+    // Call logout API (fire and forget)
+    dispatch(logout()).catch(() => {
+      // Ignore errors - we're redirecting anyway
+    });
+    
+    // Use window.location for immediate hard redirect to prevent any further execution
+    window.location.href = "/log-in";
+  };
 
   return (
     <>
@@ -239,9 +276,9 @@ const DashboardHeader: React.FC = () => {
                         </span>
                         <br/>
                         <div className=''>
-                          <h4 className='mb-0 fw-normal '>Michel John</h4>
+                          <h4 className='mb-0 fw-normal '>{user?.name || "User"}</h4>
                           <p className='fw-medium tw-text-4 text-neutral-200 fw-semibold'>
-                            examplemail@mail.com
+                            {user?.email || "example@mail.com"}
                           </p>
                         </div>
                       </div>
@@ -269,15 +306,15 @@ const DashboardHeader: React.FC = () => {
                           </Link>
                         </li>
                         <li className='tw-pt-2 border-top border-gray-100'>
-                          <Link
-                            href='/log-in'
-                            className='tw-py-3 tw-text-4 tw-px-5 hover-bg-danger-50 text-neutral-300 hover-text-danger-600 tw-duration-500 tw-rounded-md d-flex align-items-center tw-gap-2 fw-semibold tw-text-4'
+                          <button
+                            onClick={handleLogout}
+                            className='tw-py-3 tw-text-4 tw-px-5 hover-bg-danger-50 text-neutral-300 hover-text-danger-600 tw-duration-500 tw-rounded-md d-flex align-items-center tw-gap-2 fw-semibold tw-text-4 w-100 border-0 bg-transparent text-start'
                           >
                             <span className='tw-text-2xl text-danger-600 d-flex'>
                               <i className='ph ph-sign-out' />
                             </span>
                             <span className='text'>Log Out</span>
-                          </Link>
+                          </button>
                         </li>
                       </ul>
                     </div>

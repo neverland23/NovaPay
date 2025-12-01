@@ -5,6 +5,8 @@ import "./globals.css";
 import BootstrapInit from "@/helper/BootstrapInit";
 import RouteScrollToTop from "@/helper/RouteScrollToTop";
 import ErrorBoundary from "@/helper/ErrorBoundary";
+import ReduxProvider from "@/components/providers/ReduxProvider";
+import ToastProvider from "@/components/providers/ToastProvider";
 
 const wendyOne = Wendy_One({
   subsets: ["latin"],
@@ -44,11 +46,13 @@ export default function RootLayout({
     >
       <body suppressHydrationWarning={true}>
         <ErrorBoundary>
-          <BootstrapInit />
-          <RouteScrollToTop />
+          <ReduxProvider>
+            <BootstrapInit />
+            <RouteScrollToTop />
+            <ToastProvider />
+            {children}
+          </ReduxProvider>
         </ErrorBoundary>
-
-        {children}
       </body>
     </html>
   );

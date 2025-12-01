@@ -1,0 +1,53 @@
+═══════════════════════════════════════════════════════════
+    NOVAPAY SETUP CHECKLIST
+═══════════════════════════════════════════════════════════
+
+□ Step 1: Install Dependencies
+  → Run: npm install
+  → Expected: All packages installed successfully
+
+□ Step 2: Setup MongoDB
+  → Choose: Local OR MongoDB Atlas
+  → Connection string ready: □
+
+□ Step 3: Generate Secrets
+  → JWT_SECRET: □
+  → JWT_REFRESH_SECRET: □
+  → AUTH_SECRET: □
+  → Command: node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+
+□ Step 4: Create .env.local
+  → File created: □
+  → MONGODB_URI set: □
+  → All secrets added: □
+  → NEXT_PUBLIC_APP_URL set: □
+
+□ Step 5: Google OAuth Setup
+  → Project created: □
+  → API enabled: □
+  → OAuth credentials created: □
+  → Client ID added to .env.local: □
+  → Client Secret added to .env.local: □
+  → Redirect URI configured: □
+
+□ Step 6: Start Development Server
+  → Run: npm run dev
+  → Server running on http://localhost:3000: □
+
+□ Step 7: Test Registration
+  → Go to /sign-up: □
+  → Create account: □
+  → Redirected to /my-profile: □
+
+□ Step 8: Test Login
+  → Go to /log-in: □
+  → Login successful: □
+
+□ Step 9: Test Profile
+  → Account tab works: □
+  → Security tab works: □
+  → Wallet tab works: □
+
+═══════════════════════════════════════════════════════════
+          🎉 SETUP COMPLETE! 🎉
+═══════════════════════════════════════════════════════════
