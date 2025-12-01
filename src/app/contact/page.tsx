@@ -18,7 +18,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
       title: "Contact | NovaPay",
       description:
         "This is NovaPay Contact Us",
-      url: "https://nextjs.novapay.wowtheme7.com/contact",
+      url: "https://novapay.co/contact",
       type: "website",
       images: [
         {

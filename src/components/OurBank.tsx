@@ -1,9 +1,9 @@
 import CounterView from "@/helper/CounterView";
 import Image from "next/image";
 import Link from "next/link";
-import WhyChooseUsOne from "@/components/WhyChooseUsOne";
+import WhyChooseUsTwo from "@/components/WhyChooseUsTwo";
 
-const OurBankOne: React.FC = () => {
+const OurBank: React.FC = () => {
   return (
     <div className='position-relative overflow-hidden'>
       <section className='our-services-three position-relative overflow-hidden z-1'>
@@ -78,8 +78,8 @@ const OurBankOne: React.FC = () => {
             </div>
           </div>
           <div className='our-serbices-card  bg-neutral-10 overflow-hidden tw-w-100vw '>
-            {/* WhyChooseUsOne */}
-            <WhyChooseUsOne />
+            {/* WhyChooseUsTwo */}
+            <WhyChooseUsTwo />
           </div>
         </div>
       </section>
@@ -87,4 +87,4 @@ const OurBankOne: React.FC = () => {
   );
 };
 
-export default OurBankOne;
+export default OurBank;

@@ -13,11 +13,11 @@ export const generateMetadata = async (): Promise<Metadata> => {
       title: "Dashboard | NovaPay",
       description:
         "This is NovaPay Dashboard",
-      url: "https://nextjs.novapay.wowtheme7.com/dashboard",
+      url: "https://novapay.co/dashboard",
       type: "website",
       images: [
         {
-          url: "https://nextjs.novapay.wowtheme7.com/images/meta.png",
+          url: "https://novapay.co/images/meta.png",
           width: 1200,
           height: 630,
           alt: "NovaPay",

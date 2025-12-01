@@ -1,7 +1,7 @@
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import CounterView from "@/helper/CounterView";
-import PopupVideoOne from "@/components/popup/PopupVideoOne";
+import PopupVideo from "@/components/popup/PopupVideo";
 
 const Banner: React.FC = () => {
   return (
@@ -70,8 +70,8 @@ const Banner: React.FC = () => {
                         WATCH VIDEO
                       </span>
                       <div className='position-relative'>
-                        {/* PopupVideoOne */}
-                        <PopupVideoOne />
+                        {/* PopupVideo */}
+                        <PopupVideo />
                       </div>
                     </div>
                   </div>

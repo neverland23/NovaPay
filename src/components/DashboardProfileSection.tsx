@@ -120,21 +120,6 @@ const DashboardProfileSection: React.FC<DashboardProfileProps> = ({
                     Withdraw Money
                   </Link>
                 </li>
-                <li
-                  className={`header-nav-submenu__item tw-mb-4 ${
-                    pathname === "/notifications" ? "activePage" : ""
-                  } `}
-                >
-                  <Link
-                    href='/notifications'
-                    className='header-nav-submenu__link fw-normal tw-text-lg text-dark-600 d-flex align-items-center tw-gap-2 hover-text-white bg-neutral-10 tw-px-3 tw-py-3 rounded-3 hover-bg-main-gradient tw-duration-400'
-                  >
-                    <span className='tw-text-6'>
-                      <i className='ph ph-bell-ringing' />
-                    </span>
-                    Notifications
-                  </Link>
-                </li>
                 <li className='border-bottom-neutral-05 w-100 tw-mb-8 tw-mt-8' />
                 <li
                   className={`header-nav-submenu__item tw-mb-4 ${

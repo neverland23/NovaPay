@@ -4,7 +4,6 @@ import AOSWrap from "@/helper/AOSWrap";
 import Preloader from "@/helper/Preloader";
 import TopHeader from "@/components/TopHeader";
 import Header from "@/components/Header";
-
 import Breadcrumb from "@/components/Breadcrumb";
 import PrivacyPolicyInner from "@/components/PrivacyPolicyInner";
 import Newsletter from "@/components/Newsletter";
@@ -19,11 +18,11 @@ export const generateMetadata = async (): Promise<Metadata> => {
       title: "Privacy Policy | NovaPay",
       description:
         "This is NovaPay Privacy Policy",
-      url: "https://nextjs.novapay.wowtheme7.com/blog-details",
+      url: "https://novapay.co/blog-details",
       type: "website",
       images: [
         {
-          url: "https://nextjs.novapay.wowtheme7.com/images/meta.png",
+          url: "https://novapay.co/images/meta.png",
           width: 1200,
           height: 630,
           alt: "NovaPay",
