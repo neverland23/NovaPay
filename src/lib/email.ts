@@ -279,3 +279,122 @@ ${'='.repeat(60)}
     throw new Error(error.message || 'Failed to send verification email');
   }
 };
+
+export const sendPasswordResetEmail = async (
+  email: string,
+  name: string,
+  resetToken: string
+): Promise<void> => {
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+  const resetUrl = `${appUrl}/reset-password?token=${resetToken}`;
+  const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
+  const isDevelopment = process.env.NODE_ENV === 'development';
+
+  // Validate email configuration
+  const configValidation = validateEmailConfig();
+  if (!configValidation.isConfigured) {
+    console.warn('[Email Service] ⚠️  Email configuration issue:', configValidation.message);
+  }
+
+  // Check if Resend is configured
+  if (!resend || !process.env.RESEND_API_KEY) {
+    const logMessage = `
+${'='.repeat(60)}
+📧 PASSWORD RESET EMAIL (Development Mode - No API Key)
+${'='.repeat(60)}
+To: ${email}
+Subject: Reset Your NovaPays Password
+Reset Link: ${resetUrl}
+${'='.repeat(60)}
+⚠️  To send real emails, configure RESEND_API_KEY in .env.local
+    `.trim();
+    
+    console.log(logMessage);
+    
+    // In development, just log. In production, throw error
+    if (!isDevelopment) {
+      throw new Error('RESEND_API_KEY is not configured. Cannot send password reset email.');
+    }
+    return;
+  }
+
+  try {
+    const emailFrom = process.env.EMAIL_FROM || `NovaPays <${fromEmail}>`;
+    
+    console.log(`[Email Service] Attempting to send password reset email to: ${email}`);
+    console.log(`[Email Service] From: ${emailFrom}`);
+    console.log(`[Email Service] App URL: ${appUrl}`);
+
+    const { data, error } = await resend.emails.send({
+      from: emailFrom,
+      to: [email],
+      subject: 'Reset Your NovaPays Password',
+      html: `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; text-align: center; border-radius: 10px 10px 0 0;">
+            <h1 style="color: white; margin: 0;">NovaPays</h1>
+          </div>
+          <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px;">
+            <h2 style="color: #333; margin-top: 0;">Password Reset Request</h2>
+            <p>Hi ${name},</p>
+            <p>We received a request to reset your password. Click the button below to create a new password:</p>
+            <div style="text-align: center; margin: 30px 0;">
+              <a href="${resetUrl}" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold;">Reset Password</a>
+            </div>
+            <p style="color: #666; font-size: 14px;">Or copy and paste this link into your browser:</p>
+            <p style="color: #667eea; font-size: 12px; word-break: break-all;">${resetUrl}</p>
+            <p style="color: #666; font-size: 14px; margin-top: 30px;">This link will expire in 1 hour.</p>
+            <p style="color: #666; font-size: 14px;">If you didn't request a password reset, please ignore this email. Your password will remain unchanged.</p>
+          </div>
+          <div style="text-align: center; margin-top: 20px; color: #999; font-size: 12px;">
+            <p>&copy; ${new Date().getFullYear()} NovaPays. All rights reserved.</p>
+          </div>
+        </body>
+        </html>
+      `,
+      text: `
+        Hi ${name},
+        
+        We received a request to reset your password. Please visit the following link to create a new password:
+        
+        ${resetUrl}
+        
+        This link will expire in 1 hour.
+        
+        If you didn't request a password reset, please ignore this email. Your password will remain unchanged.
+      `,
+    });
+
+    if (error) {
+      console.error('[Email Service] Resend API error:', JSON.stringify(error, null, 2));
+      const errorMessage = error.message || 'Unknown error from Resend API';
+      throw new Error(`Failed to send password reset email: ${errorMessage}`);
+    }
+
+    if (!data || !data.id) {
+      console.error('[Email Service] No email ID returned from Resend');
+      throw new Error('Failed to send password reset email: No email ID returned');
+    }
+
+    console.log(`[Email Service] ✅ Password reset email sent successfully! Email ID: ${data.id}`);
+    console.log(`[Email Service] Recipient: ${email}`);
+  } catch (error: any) {
+    console.error('[Email Service] ❌ Error sending password reset email:', error);
+    console.error('[Email Service] Error details:', {
+      message: error.message,
+      stack: error.stack,
+      email,
+      hasApiKey: !!process.env.RESEND_API_KEY,
+      nodeEnv: process.env.NODE_ENV,
+    });
+    
+    // Always throw error - let the calling code decide how to handle it
+    throw new Error(error.message || 'Failed to send password reset email');
+  }
+};

@@ -109,7 +109,7 @@ const ResetPasswordForm: React.FC = () => {
                 Your password has been reset successfully. You will be redirected to the login page shortly.
               </p>
               <Link href="/log-in">
-                <Button fullWidth>
+                <Button className="bg-main-gradient" fullWidth>
                   Go to Login
                 </Button>
               </Link>
@@ -169,7 +169,7 @@ const ResetPasswordForm: React.FC = () => {
                 type="submit"
                 fullWidth
                 isLoading={isLoading}
-                className="tw-mb-3"
+                className="tw-mb-3 bg-main-gradient"
               >
                 Reset Password
               </Button>

@@ -23,8 +23,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Verify token format
+    // Verify token format first (quick validation)
     if (!verifyPasswordResetToken(token)) {
+      console.warn('[Reset Password] Invalid token format');
       return NextResponse.json(
         { error: 'Invalid or expired reset token' },
         { status: 400 }
@@ -40,6 +41,7 @@ export async function POST(request: NextRequest) {
     });
 
     if (!resetToken) {
+      console.warn('[Reset Password] Token not found or expired in database');
       return NextResponse.json(
         { error: 'Invalid or expired reset token' },
         { status: 400 }
@@ -47,27 +49,34 @@ export async function POST(request: NextRequest) {
     }
 
     // Find user
-    const user = await User.findOne({ email: resetToken.email });
+    const user = await User.findOne({ email: resetToken.email }).select('+password');
     if (!user) {
+      console.error('[Reset Password] User not found for email:', resetToken.email);
       return NextResponse.json(
         { error: 'User not found' },
         { status: 404 }
       );
     }
 
-    // Update password
+    // Update password (User model pre-save hook will hash it automatically)
     user.password = newPassword;
     await user.save();
 
-    // Delete reset token
-    await PasswordResetToken.deleteOne({ token });
+    console.log(`[Reset Password] Password reset successful for user: ${user.email}`);
+
+    // Delete reset token (and any other tokens for this email)
+    await PasswordResetToken.deleteMany({ email: user.email });
 
     return NextResponse.json({
       success: true,
       message: 'Password reset successful',
     });
   } catch (error: any) {
-    console.error('Reset password error:', error);
+    console.error('[Reset Password] Error:', error);
+    console.error('[Reset Password] Error details:', {
+      message: error.message,
+      stack: error.stack,
+    });
     return NextResponse.json(
       { error: error.message || 'Failed to reset password' },
       { status: 500 }
