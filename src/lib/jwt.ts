@@ -12,17 +12,15 @@ export interface TokenPayload {
 }
 
 export const generateAccessToken = (payload: TokenPayload): string => {
-  const options: SignOptions = {
-    expiresIn: JWT_EXPIRE as string | number,
-  };
-  return jwt.sign(payload, JWT_SECRET, options);
+  return jwt.sign(payload, JWT_SECRET, {
+    expiresIn: JWT_EXPIRE,
+  } as SignOptions);
 };
 
 export const generateRefreshToken = (payload: TokenPayload): string => {
-  const options: SignOptions = {
-    expiresIn: JWT_REFRESH_EXPIRE as string | number,
-  };
-  return jwt.sign(payload, JWT_REFRESH_SECRET, options);
+  return jwt.sign(payload, JWT_REFRESH_SECRET, {
+    expiresIn: JWT_REFRESH_EXPIRE,
+  } as SignOptions);
 };
 
 export const verifyAccessToken = (token: string): TokenPayload => {
@@ -42,10 +40,9 @@ export const verifyRefreshToken = (token: string): TokenPayload => {
 };
 
 export const generatePasswordResetToken = (): string => {
-  const options: SignOptions = {
+  return jwt.sign({ type: 'password-reset' }, JWT_SECRET, {
     expiresIn: '1h',
-  };
-  return jwt.sign({ type: 'password-reset' }, JWT_SECRET, options);
+  } as SignOptions);
 };
 
 export const verifyPasswordResetToken = (token: string): boolean => {
