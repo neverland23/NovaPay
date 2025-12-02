@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { register, clearError } from "@/redux/features/authSlice";
@@ -13,14 +13,21 @@ import Select from "./ui/Select";
 
 const SignUpInner: React.FC = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const dispatch = useAppDispatch();
   const { isLoading, error: authError, isAuthenticated } = useAppSelector((state) => state.auth);
+  
+  // Get accountType from URL query parameter
+  const accountTypeFromUrl = searchParams.get('accountType') as "individual" | "team" | null;
+  const initialAccountType = (accountTypeFromUrl === 'individual' || accountTypeFromUrl === 'team') 
+    ? accountTypeFromUrl 
+    : "individual";
   
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
-    accountType: "individual" as "individual" | "team",
+    accountType: initialAccountType,
     termsAccepted: false,
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});

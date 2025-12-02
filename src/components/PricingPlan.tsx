@@ -1,11 +1,69 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { fetchUserSession, setUser } from "@/redux/features/authSlice";
+import { updateAccount } from "@/redux/features/profileSlice";
+import { toast } from "react-toastify";
+import Button from "./ui/Button";
+import { useEffect, useState } from "react";
 
-const PricingPlan: React.FC = () => {
+interface PricingPlanProps {
+  isDashboard?: boolean;
+}
+
+const PricingPlan: React.FC<PricingPlanProps> = ({ isDashboard = false }) => {
+  const router = useRouter();
+  const dispatch = useAppDispatch();
+  const { user, isAuthenticated, isLoading: authLoading } = useAppSelector((state) => state.auth);
+  const { isLoading: profileLoading } = useAppSelector((state) => state.profile);
+  const [isUpdating, setIsUpdating] = useState(false);
+
+  useEffect(() => {
+    if (isDashboard && isAuthenticated && !user) {
+      dispatch(fetchUserSession());
+    }
+  }, [isDashboard, isAuthenticated, user, dispatch]);
+
+  const handleChoose = async (accountType: 'individual' | 'team') => {
+    if (!isAuthenticated) {
+      router.push(`/sign-up?accountType=${accountType}`);
+      return;
+    }
+
+    if (user?.accountType === accountType) {
+      toast.info(`You are already on the ${accountType} plan`);
+      return;
+    }
+
+    setIsUpdating(true);
+    try {
+      const updatedUser = await dispatch(updateAccount({ accountType })).unwrap();
+      toast.success(`Account type updated to ${accountType}`);
+      // Update auth state with new user data
+      if (updatedUser) {
+        dispatch(setUser(updatedUser));
+      } else {
+        // Fallback: refresh user session
+        await dispatch(fetchUserSession());
+      }
+    } catch (error: any) {
+      toast.error(error.message || 'Failed to update account type');
+    } finally {
+      setIsUpdating(false);
+    }
+  };
+
+  const isLoading = authLoading || profileLoading || isUpdating;
+  const currentAccountType = user?.accountType;
+
   return (
-    <section className='py-140 overflow-hidden'>
+    <section className={`overflow-hidden ${isDashboard ? 'bg-white tw-px-8 tw-py-8 rounded-3' : 'py-140'}`}>
       <div className='container'>
-        <div className='d-flex align-items-center tw-gap-9  justify-content-between flex-wrap tw-mb-80-px'>
+        {!isDashboard && (
+          <div className='d-flex align-items-center tw-gap-9  justify-content-between flex-wrap tw-mb-80-px'>
           <div className='max-w-616'>
             <div
               className='d-flex align-items-center tw-gap-1 tw-mb-4'
@@ -28,7 +86,14 @@ const PricingPlan: React.FC = () => {
               We Charge As Little As Possible. No Subscription Fee
             </h2>
           </div>
-        </div>
+          </div>
+        )}
+        {isDashboard && (
+          <div>
+            <h5 className='fw-normal text-dark-600'>Our Pricing Plan</h5>
+            <span className='border-neutral-200 border-bottom tw-border-dashed w-100 tw-mt-6 tw-mb-6' />
+          </div>
+        )}
         <div className='row gy-4'>
           <div className='col-lg-6 col-md-12'>
             <div className='group' data-aos='fade-up' data-aos-duration={800}>
@@ -37,6 +102,13 @@ const PricingPlan: React.FC = () => {
                   <h3 className='fw-normal text-dark-600 tw-mb-3 group-hover-text-white tw-duration-500'>
                     Individual
                   </h3>
+                  {isAuthenticated && currentAccountType === 'individual' && (
+                    <div className='tw-mb-2'>
+                      <span className='badge bg-success text-white tw-px-3 tw-py-1 tw-rounded-lg'>
+                        Selected
+                      </span>
+                    </div>
+                  )}
                   <div className='d-flex align-items-center tw-gap-1 tw-mb-8 '>
                     <h5 className='fw-normal cursor-big group-hover-text-white tw-duration-500'>
                       An individual account provides one personal bank account for your own transactions.
@@ -91,6 +163,17 @@ const PricingPlan: React.FC = () => {
                       </span>
                     </div>
                   </div>
+                  <div className='tw-mt-6'>
+                    <Button
+                      fullWidth
+                      onClick={() => handleChoose('individual')}
+                      disabled={isLoading}
+                      isLoading={isLoading && currentAccountType !== 'individual'}
+                      className='group-hover:bg-white group-hover:text-base-two-600 tw-duration-500'
+                    >
+                      Choose
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -102,6 +185,13 @@ const PricingPlan: React.FC = () => {
                   <h3 className='fw-normal text-dark-600 tw-mb-3 group-hover-text-white tw-duration-500'>
                     Team - Plus
                   </h3>
+                  {isAuthenticated && currentAccountType === 'team' && (
+                    <div className='tw-mb-2'>
+                      <span className='badge bg-success text-white tw-px-3 tw-py-1 tw-rounded-lg'>
+                        Selected
+                      </span>
+                    </div>
+                  )}
                   <div className='d-flex align-items-center tw-gap-1 tw-mb-8 '>
                     <h5 className='fw-normal cursor-big group-hover-text-white tw-duration-500'>
                       A team account lets you add unlimited sub-accounts and manage all transactions centrally with built-in analytics.
@@ -173,6 +263,17 @@ const PricingPlan: React.FC = () => {
                         Service Fee: 3.5%
                       </span>
                     </div>
+                  </div>
+                  <div className='tw-mt-6'>
+                    <Button
+                      fullWidth
+                      onClick={() => handleChoose('team')}
+                      disabled={isLoading}
+                      isLoading={isLoading && currentAccountType !== 'team'}
+                      className='group-hover:bg-white group-hover:text-base-two-600 tw-duration-500'
+                    >
+                      Choose
+                    </Button>
                   </div>
                 </div>
               </div>

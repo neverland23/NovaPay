@@ -1,19 +1,19 @@
-import React, { Suspense } from "react";
+import React from "react";
 import type { Metadata } from "next";
 import AOSWrap from "@/helper/AOSWrap";
-import Preloader from "@/helper/Preloader";
-import SignUpInner from "@/components/SignUpInner";
+import DashboardLayout from "@/layout/DashboardLayout";
+import PricingPlan from "@/components/PricingPlan";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Sign-up | NovaPay",
+    title: "Dashboard - Pricing Plan | NovaPay",
     description:
-      "This is NovaPay Sign UP",
+      "This is NovaPay Dashboard Pricing Plan",
     openGraph: {
-      title: "Sign-up | NovaPay",
+      title: "Dashboard - Pricing Plan | NovaPay",
       description:
-        "This is NovaPay Sign UP",
-      url: "https://novapay.co/sign-up",
+        "This is NovaPay Dashboard Pricing Plan",
+      url: "https://novapay.co/dashboard-pricing-plan",
       type: "website",
       images: [
         {
@@ -30,13 +30,10 @@ export const generateMetadata = async (): Promise<Metadata> => {
 const Page: React.FC = () => {
   return (
     <AOSWrap>
-      {/* <Preloader /> */}
-      <Preloader />
-
-      {/* SignUpInner wrapped in Suspense for useSearchParams */}
-      <Suspense fallback={<div>Loading...</div>}>
-        <SignUpInner />
-      </Suspense>
+      <DashboardLayout>
+        {/* PricingPlan */}
+        <PricingPlan isDashboard={true} />
+      </DashboardLayout>
     </AOSWrap>
   );
 };

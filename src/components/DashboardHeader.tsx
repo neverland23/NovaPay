@@ -296,7 +296,7 @@ const DashboardHeader: React.FC = () => {
                         </li>
                         <li className='tw-mb-1'>
                           <Link
-                            href='/pricing-plan'
+                            href='/dashboard-pricing-plan'
                             className='tw-py-3 tw-text-4 tw-px-5 hover-bg-gray-50 text-neutral-300 tw-rounded-lg d-flex align-items-center tw-gap-2 fw-semibold tw-text-4'
                           >
                             <span className='tw-text-2xl text-primary-600 d-flex'>
