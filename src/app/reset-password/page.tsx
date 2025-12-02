@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import Input from "@/components/ui/Input";
 import Button from "@/components/ui/Button";
 
-const Page: React.FC = () => {
+const ResetPasswordForm: React.FC = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const token = searchParams.get("token");
@@ -183,6 +183,24 @@ const Page: React.FC = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const Page: React.FC = () => {
+  return (
+    <Suspense fallback={
+      <section className='position-relative'>
+        <div className='d-flex tw-h-screen'>
+          <div className='flex-grow-1'>
+            <div className='max-w-526-px w-100 log-in-card tw-px-6 tw-py-12 mx-auto'>
+              <div className='text-center'>Loading...</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    }>
+      <ResetPasswordForm />
+    </Suspense>
   );
 };
 
