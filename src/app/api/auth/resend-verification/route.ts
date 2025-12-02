@@ -49,15 +49,29 @@ export async function POST(request: NextRequest) {
     // Send verification email
     try {
       await sendResendVerificationEmail(user.email, user.name, emailVerificationToken);
+      console.log(`[Resend Verification] Verification email sent successfully to ${user.email}`);
+      
+      return NextResponse.json({
+        success: true,
+        message: 'If an account exists with that email, a new verification link has been sent.',
+      });
     } catch (emailError: any) {
-      console.error('Error sending resend verification email:', emailError);
-      // Continue even if email fails (in development)
+      console.error('[Resend Verification] Error sending verification email:', emailError);
+      console.error('[Resend Verification] Email error details:', {
+        email: user.email,
+        error: emailError.message,
+        stack: emailError.stack,
+      });
+      
+      // Return error response so the frontend knows the email failed
+      return NextResponse.json(
+        { 
+          error: 'Failed to send verification email. Please try again later or contact support.',
+          details: process.env.NODE_ENV === 'development' ? emailError.message : undefined,
+        },
+        { status: 500 }
+      );
     }
-
-    return NextResponse.json({
-      success: true,
-      message: 'If an account exists with that email, a new verification link has been sent.',
-    });
   } catch (error: any) {
     console.error('Resend verification error:', error);
     return NextResponse.json(

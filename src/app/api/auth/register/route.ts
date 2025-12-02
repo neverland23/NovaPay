@@ -94,9 +94,21 @@ export async function POST(request: NextRequest) {
     // Send verification email
     try {
       await sendVerificationEmail(user.email, user.name, emailVerificationToken);
+      console.log(`[Register] Verification email sent successfully to ${user.email}`);
     } catch (emailError: any) {
-      console.error('Error sending verification email:', emailError);
-      // Continue even if email fails (in development)
+      console.error('[Register] Error sending verification email:', emailError);
+      console.error('[Register] Email error details:', {
+        email: user.email,
+        error: emailError.message,
+        stack: emailError.stack,
+      });
+      
+      // In development, log but continue. In production, we should still continue
+      // but log the error so it's visible in logs
+      // The user account is created, they can request a new verification email
+      if (process.env.NODE_ENV === 'production') {
+        console.error('[Register] ⚠️  User account created but verification email failed to send. User can request a new email.');
+      }
     }
 
     // Return success without setting auth cookies
