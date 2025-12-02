@@ -20,6 +20,7 @@ export interface User {
   }>;
   passwordLastChanged?: Date | string;
   createdAt?: Date | string;
+  emailVerified?: boolean;
 }
 
 interface AuthState {

@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import connectDB from '@/lib/mongodb';
 import User from '@/models/User';
 import Bank from '@/models/Bank';
-import { generateAccessToken, generateRefreshToken } from '@/lib/jwt';
-import { setAuthCookies } from '@/lib/cookies';
+import { generateEmailVerificationToken } from '@/lib/jwt';
+import { sendVerificationEmail } from '@/lib/email';
 import { generateBankData } from '@/lib/generate-bank-data';
 
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -67,31 +67,20 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create user
+    // Generate email verification token
+    const emailVerificationToken = generateEmailVerificationToken();
+    const emailVerificationExpires = new Date(Date.now() + 24 * 60 * 60 * 1000); // 24 hours
+
+    // Create user (email not verified yet)
     const user = await User.create({
       email: email.toLowerCase(),
       password,
       name,
       accountType,
+      emailVerified: false,
+      emailVerificationToken,
+      emailVerificationExpires,
     });
-
-    // Generate tokens
-    const accessToken = generateAccessToken({
-      userId: user._id.toString(),
-      email: user.email,
-    });
-
-    const refreshToken = generateRefreshToken({
-      userId: user._id.toString(),
-      email: user.email,
-    });
-
-    // Store refresh token
-    user.refreshToken = refreshToken;
-    await user.save({ validateBeforeSave: false });
-
-    // Refresh user to get passwordLastChanged
-    const updatedUser = await User.findById(user._id);
 
     // Auto-generate bank data
     try {
@@ -102,26 +91,22 @@ export async function POST(request: NextRequest) {
       // Continue even if bank creation fails
     }
 
-    // Set cookies
-    const response = NextResponse.json({
-      success: true,
-      user: {
-        _id: updatedUser?._id.toString(),
-        name: updatedUser?.name,
-        email: updatedUser?.email,
-        accountType: updatedUser?.accountType,
-        firstName: updatedUser?.firstName,
-        lastName: updatedUser?.lastName,
-        phone: updatedUser?.phone,
-        avatar: updatedUser?.avatar,
-        twoFactorEnabled: updatedUser?.twoFactorEnabled,
-        wallet: updatedUser?.wallet,
-        securityQuestions: updatedUser?.securityQuestions,
-        passwordLastChanged: updatedUser?.passwordLastChanged ?? updatedUser?.createdAt,
-      },
-    });
+    // Send verification email
+    try {
+      await sendVerificationEmail(user.email, user.name, emailVerificationToken);
+    } catch (emailError: any) {
+      console.error('Error sending verification email:', emailError);
+      // Continue even if email fails (in development)
+    }
 
-    return setAuthCookies(response, accessToken, refreshToken);
+    // Return success without setting auth cookies
+    // User must verify email before accessing dashboard
+    return NextResponse.json({
+      success: true,
+      message: 'Registration successful! Please check your email to verify your account.',
+      email: user.email,
+      emailVerified: false,
+    });
   } catch (error: any) {
     console.error('Registration error:', error);
     return NextResponse.json(

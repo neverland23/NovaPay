@@ -54,6 +54,21 @@ export const verifyPasswordResetToken = (token: string): boolean => {
   }
 };
 
+export const generateEmailVerificationToken = (): string => {
+  return jwt.sign({ type: 'email-verification' }, JWT_SECRET, {
+    expiresIn: '24h',
+  } as SignOptions);
+};
+
+export const verifyEmailVerificationToken = (token: string): boolean => {
+  try {
+    const decoded = jwt.verify(token, JWT_SECRET) as { type?: string };
+    return decoded.type === 'email-verification';
+  } catch (error) {
+    return false;
+  }
+};
+
 
 
 

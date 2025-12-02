@@ -73,10 +73,14 @@ export async function GET(request: NextRequest) {
       // Update Google ID if not set
       if (!user.googleId) {
         user.googleId = googleUser.id;
-        await user.save();
       }
+      // Mark email as verified (Google already verified it)
+      if (!user.emailVerified) {
+        user.emailVerified = true;
+      }
+      await user.save();
     } else {
-      // Create new user
+      // Create new user - email is already verified by Google
       user = await User.create({
         email: googleUser.email,
         name: googleUser.name || googleUser.email,
@@ -85,6 +89,7 @@ export async function GET(request: NextRequest) {
         lastName: googleUser.family_name,
         avatar: googleUser.picture,
         accountType: 'individual',
+        emailVerified: true, // Google OAuth users have verified emails
       });
     }
 

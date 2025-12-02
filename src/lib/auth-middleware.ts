@@ -12,7 +12,7 @@ export interface AuthenticatedRequest extends NextRequest {
 }
 
 export async function authenticateUser(request: NextRequest): Promise<{
-  user: { userId: string; email: string } | null;
+  user: { userId: string; email: string; emailVerified: boolean } | null;
   error: string | null;
 }> {
   try {
@@ -46,6 +46,7 @@ export async function authenticateUser(request: NextRequest): Promise<{
           user: {
             userId: user._id.toString(),
             email: user.email,
+            emailVerified: user.emailVerified || false,
           },
           error: null,
         };
@@ -56,10 +57,20 @@ export async function authenticateUser(request: NextRequest): Promise<{
 
     try {
       const decoded = verifyAccessToken(accessToken);
+      await connectDB();
+      
+      // Fetch user to check email verification status
+      const user = await User.findById(decoded.userId);
+      
+      if (!user) {
+        return { user: null, error: 'User not found' };
+      }
+
       return {
         user: {
           userId: decoded.userId,
           email: decoded.email,
+          emailVerified: user.emailVerified || false,
         },
         error: null,
       };

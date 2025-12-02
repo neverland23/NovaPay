@@ -32,11 +32,7 @@ const SignUpInner: React.FC = () => {
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-  useEffect(() => {
-    if (isAuthenticated) {
-      router.push("/dashboard");
-    }
-  }, [isAuthenticated, router]);
+  // Remove auto-redirect on authentication - we'll handle it manually after registration
 
   useEffect(() => {
     if (authError) {
@@ -84,15 +80,16 @@ const SignUpInner: React.FC = () => {
     }
 
     try {
-      await dispatch(register({
+      const result = await dispatch(register({
         name: formData.name,
         email: formData.email,
         password: formData.password,
         accountType: formData.accountType,
       })).unwrap();
 
-      toast.success("Registration successful!");
-      router.push("/dashboard");
+      toast.success(result.message || "Registration successful! Please check your email to verify your account.");
+      // Redirect to verification page with email pre-filled
+      router.push(`/verify-email?email=${encodeURIComponent(formData.email)}`);
     } catch (error: any) {
       toast.error(error.message || "Registration failed");
     }

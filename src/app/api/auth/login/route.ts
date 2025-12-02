@@ -102,7 +102,9 @@ export async function POST(request: NextRequest) {
         wallet: updatedUser?.wallet,
         securityQuestions: updatedUser?.securityQuestions,
         passwordLastChanged: updatedUser?.passwordLastChanged ?? updatedUser?.createdAt,
+        emailVerified: updatedUser?.emailVerified || false,
       },
+      emailVerified: updatedUser?.emailVerified || false,
     });
 
     return setAuthCookies(response, accessToken, refreshToken);

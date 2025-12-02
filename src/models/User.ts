@@ -22,6 +22,9 @@ export interface IUser extends Document {
   accountType: 'individual' | 'team';
   refreshToken?: string;
   passwordLastChanged?: Date;
+  emailVerified: boolean;
+  emailVerificationToken?: string;
+  emailVerificationExpires?: Date;
   createdAt: Date;
   updatedAt: Date;
   comparePassword(candidatePassword: string): Promise<boolean>;
@@ -110,6 +113,17 @@ const UserSchema = new Schema<IUser>(
       select: false,
     },
     passwordLastChanged: {
+      type: Date,
+    },
+    emailVerified: {
+      type: Boolean,
+      default: false,
+    },
+    emailVerificationToken: {
+      type: String,
+      select: false,
+    },
+    emailVerificationExpires: {
       type: Date,
     },
   },

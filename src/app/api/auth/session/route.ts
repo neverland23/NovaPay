@@ -39,6 +39,7 @@ export async function GET(request: NextRequest) {
         securityQuestions: userDoc.securityQuestions,
         passwordLastChanged: userDoc.passwordLastChanged ?? userDoc.createdAt,
         createdAt: userDoc.createdAt,
+        emailVerified: userDoc.emailVerified || false,
       },
     });
   } catch (error: any) {

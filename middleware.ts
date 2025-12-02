@@ -32,6 +32,14 @@ export async function middleware(request: NextRequest) {
       loginUrl.searchParams.set('redirect', pathname);
       return NextResponse.redirect(loginUrl);
     }
+
+    // Check if email is verified (skip for verify-email page itself)
+    if (!user.emailVerified && pathname !== '/verify-email') {
+      // Redirect to email verification page
+      const verifyUrl = new URL('/verify-email', request.url);
+      verifyUrl.searchParams.set('redirect', pathname);
+      return NextResponse.redirect(verifyUrl);
+    }
   }
 
   // Redirect authenticated users from home page to dashboard

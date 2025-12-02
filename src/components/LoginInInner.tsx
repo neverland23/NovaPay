@@ -66,15 +66,22 @@ const LoginInInner: React.FC = () => {
     }
 
     try {
-      await dispatch(login({
+      const result = await dispatch(login({
         email: formData.email,
         password: formData.password,
         rememberMe: formData.rememberMe,
       })).unwrap();
 
       toast.success("Login successful!");
-      const redirect = searchParams.get("redirect") || "/dashboard";
-      router.push(redirect);
+      
+      // Check if email is verified
+      if (result.emailVerified === false) {
+        // Redirect to verification page
+        router.push(`/verify-email?email=${encodeURIComponent(formData.email)}`);
+      } else {
+        const redirect = searchParams.get("redirect") || "/dashboard";
+        router.push(redirect);
+      }
     } catch (error: any) {
       toast.error(error.message || "Login failed");
     }
