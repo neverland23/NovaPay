@@ -1,8 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import connectDB from '@/lib/mongodb';
 import User from '@/models/User';
+import Bank from '@/models/Bank';
 import { generateAccessToken, generateRefreshToken } from '@/lib/jwt';
 import { setAuthCookies } from '@/lib/cookies';
+import { generateBankData } from '@/lib/generate-bank-data';
 
 export async function GET(request: NextRequest) {
   try {
@@ -69,6 +71,8 @@ export async function GET(request: NextRequest) {
       $or: [{ email: googleUser.email }, { googleId: googleUser.id }],
     });
 
+    let isNewUser = false;
+
     if (user) {
       // Update Google ID if not set
       if (!user.googleId) {
@@ -81,6 +85,7 @@ export async function GET(request: NextRequest) {
       await user.save();
     } else {
       // Create new user - email is already verified by Google
+      isNewUser = true;
       user = await User.create({
         email: googleUser.email,
         name: googleUser.name || googleUser.email,
@@ -91,6 +96,20 @@ export async function GET(request: NextRequest) {
         accountType: 'individual',
         emailVerified: true, // Google OAuth users have verified emails
       });
+
+      // Auto-generate bank data for new Google OAuth users
+      try {
+        // Check if bank data already exists (shouldn't for new user, but just in case)
+        const existingBank = await Bank.findOne({ userId: user._id });
+        if (!existingBank) {
+          const bankData = generateBankData(user._id, user.name);
+          await Bank.create(bankData);
+          console.log(`[Google OAuth] Bank data created for new user: ${user.email}`);
+        }
+      } catch (bankError: any) {
+        console.error('[Google OAuth] Error creating bank data:', bankError);
+        // Continue even if bank creation fails - user can still log in
+      }
     }
 
     // Generate our tokens
