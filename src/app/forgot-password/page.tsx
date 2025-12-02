@@ -116,7 +116,7 @@ const Page: React.FC = () => {
                 type="submit"
                 fullWidth
                 isLoading={isLoading}
-                className="tw-mb-3"
+                className="tw-mb-3 bg-main-gradient"
               >
                 Send Reset Link
               </Button>
