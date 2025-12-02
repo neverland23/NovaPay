@@ -13,21 +13,21 @@ import Services from "@/components/Services";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Our-services | NovaPay",
+    title: "Our Services | NovaPays - Complete Payment Solutions",
     description:
-      "This is NovaPay Our Service",
+      "Discover NovaPay's comprehensive range of financial services including international money transfers, remittance, currency exchange, digital wallet, and payment processing. Fast, secure, and reliable solutions for all your payment needs.",
     openGraph: {
-      title: "Our-services | NovaPay",
+      title: "Our Services | NovaPays - Complete Payment Solutions",
       description:
-        "This is NovaPay Our Service",
-      url: "https://novapay.co/our-services",
+        "Discover NovaPays's comprehensive range of financial services including international money transfers, remittance, currency exchange, digital wallet, and payment processing. Fast, secure, and reliable solutions for all your payment needs.",
+      url: "https://novapays.co/our-services",
       type: "website",
       images: [
         {
-          url: "https://novapay.co/images/meta.png",
+          url: "https://novapays.co/images/meta.png",
           width: 1200,
           height: 630,
-          alt: "NovaPay",
+          alt: "NovaPays Services - Complete Payment Solutions",
         },
       ],
     },

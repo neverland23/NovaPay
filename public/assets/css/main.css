@@ -1,5 +1,5 @@
 /* ============================= CSS table of contents and Scss Indexing ================================
-* Name: NovaPay money exchange Next js Template
+* Name: NovaPays money exchange Next js Template
 * Version: 1.0.0
 * Author: wowtheme7
 * Author URI: https://themeforest.net/user/wowtheme7
@@ -81,7 +81,7 @@
     * Our services
     * Payment method
     * Payment solution four
-    * NovaPay
+    * NovaPays
     * Preloader
     * Range slider
     * Request
@@ -9305,7 +9305,7 @@ input:focus-visible {
 }
 
 @media (max-width: 1199px) {
-  .novapay-card {
+  .novapays-card {
     width: 100%;
     height: 100%;
   }
@@ -9313,7 +9313,7 @@ input:focus-visible {
 
 /*================= Psylox One Css End======================*/
 /*================= Psylox Two Css Start ======================*/
-.novapay-two-link::before {
+.novapays-two-link::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -9326,7 +9326,7 @@ input:focus-visible {
   transition: 0.4s;
 }
 
-.novapay-two-link:hover::before {
+.novapays-two-link:hover::before {
   position: absolute;
   content: "";
   width: 100%;

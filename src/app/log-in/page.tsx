@@ -6,21 +6,21 @@ import LoginInInner from "@/components/LoginInInner";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Log-in | NovaPay Money Exchange Next JS Template",
+    title: "Log In | NovaPays - Access Your Account",
     description:
-      "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
+      "Sign in to your NovaPays account to manage payments, view transactions, and access all financial services. Secure login with email verification and two-factor authentication support. Forgot your password? Reset it quickly and securely.",
     openGraph: {
-      title: "Log-in | NovaPay",
+      title: "Log In | NovaPays - Access Your Account",
       description:
-        "NovaPay is a professional Next JS Template for online money exchange, remittance, and digital payment services. Clean design, responsive layout, and modern UI components included.",
-      url: "https://novapay.co/log-in",
+        "Sign in to your NovaPays account to manage payments, view transactions, and access all financial services. Secure login with email verification and two-factor authentication support. Forgot your password? Reset it quickly and securely.",
+      url: "https://novapays.co/log-in",
       type: "website",
       images: [
         {
-          url: "https://novapay.co/images/meta.png",
+          url: "https://novapays.co/images/meta.png",
           width: 1200,
           height: 630,
-          alt: "NovaPay",
+          alt: "Log In to NovaPays - Access Your Account",
         },
       ],
     },

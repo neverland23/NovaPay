@@ -11,21 +11,21 @@ import Footer from "@/components/Footer";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Terms Of Service | NovaPay",
+    title: "Terms of Service | NovaPays - User Agreement",
     description:
-      "This is NovaPay Terms Of Service",
+      "Review NovaPays's terms of service and user agreement. Understand your rights and responsibilities when using our platform, including account usage, transaction policies, fees, and service limitations.",
     openGraph: {
-      title: "Terms Of Service | NovaPay",
+      title: "Terms of Service | NovaPays - User Agreement",
       description:
-        "This is NovaPay Terms Of Service",
-      url: "https://novapay.co/blog-details",
+        "Review NovaPays's terms of service and user agreement. Understand your rights and responsibilities when using our platform, including account usage, transaction policies, fees, and service limitations.",
+      url: "https://novapays.co/terms-of-service",
       type: "website",
       images: [
         {
-          url: "https://novapay.co/images/meta.png",
+          url: "https://novapays.co/images/meta.png",
           width: 1200,
           height: 630,
-          alt: "NovaPay",
+          alt: "NovaPays Terms of Service - User Agreement",
         },
       ],
     },

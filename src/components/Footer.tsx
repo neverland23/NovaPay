@@ -134,7 +134,7 @@ const Footer: React.FC = () => {
                   (872) 217-3342
                 </h5>
                 <span className='tw-text-lg fw-normal text-neutral-10'>
-                  support@novapay.co
+                  support@novapays.co
                 </span>
               </div>
             </div>
@@ -163,7 +163,7 @@ const Footer: React.FC = () => {
         <div className='tw-mb-10 border-top-dark-500 tw-pt-6'>
           <div className='d-flex align-items-center justify-content-between tw-gap-4 flex-wrap'>
             <p className='fw-semibold tw-text-lg text-white'>
-              Copyright @ {new Date().getFullYear()} NovaPay
+              Copyright @ {new Date().getFullYear()} NovaPays
             </p>
           </div>
         </div>

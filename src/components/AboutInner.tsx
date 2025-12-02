@@ -40,7 +40,7 @@ const AboutInner: React.FC = () => {
                 Our Mission &amp; Values
               </h4>
               <p className='fw-normal tw-text-lg text-dark-500 tw-mb-8'>
-                At NovaPay, our journey began with a clear mission: to redefine how people send, receive, and manage money across the world.
+                At NovaPays, our journey began with a clear mission: to redefine how people send, receive, and manage money across the world.
                 We are transforming traditional finance by delivering a modern, digital-first banking experience designed for today’s global users.
               </p>
               <div className='tw-mb-8'>
@@ -113,7 +113,7 @@ const AboutInner: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-white'>
-                        NovaPay was created to modernize global money movement by making fast, secure, and borderless payments accessible to everyone.
+                        NovaPays was created to modernize global money movement by making fast, secure, and borderless payments accessible to everyone.
                       </p>
                     </div>
                   </div>
@@ -138,7 +138,7 @@ const AboutInner: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-white'>
-                        NovaPay is a global financial technology platform built to make international payments simple, fast, and secure for everyone.
+                        NovaPays is a global financial technology platform built to make international payments simple, fast, and secure for everyone.
                       </p>
                     </div>
                   </div>
@@ -153,7 +153,7 @@ const AboutInner: React.FC = () => {
                       aria-expanded='false'
                       aria-controls='collapseSeven'
                     >
-                      Why Choose NovaPay
+                      Why Choose NovaPays
                     </button>
                   </h2>
                   <div
@@ -163,7 +163,7 @@ const AboutInner: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-white'>
-                        Choose NovaPay for fast, secure, and transparent global payments designed to simplify your financial life.
+                        Choose NovaPays for fast, secure, and transparent global payments designed to simplify your financial life.
                       </p>
                     </div>
                   </div>

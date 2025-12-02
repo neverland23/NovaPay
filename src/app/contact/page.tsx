@@ -11,21 +11,21 @@ import ContactInner from "@/components/ContactInner";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Contact | NovaPay",
+    title: "Contact Us | NovaPays - Get in Touch",
     description:
-      "This is NovaPay Contact Us",
+      "Have questions about NovaPays services? Contact our support team for assistance with account setup, transactions, payment issues, or general inquiries. We're here to help 24/7 with fast and friendly customer support.",
     openGraph: {
-      title: "Contact | NovaPay",
+      title: "Contact Us | NovaPays - Get in Touch",
       description:
-        "This is NovaPay Contact Us",
-      url: "https://novapay.co/contact",
+        "Have questions about NovaPays services? Contact our support team for assistance with account setup, transactions, payment issues, or general inquiries. We're here to help 24/7 with fast and friendly customer support.",
+      url: "https://novapays.co/contact",
       type: "website",
       images: [
         {
-          url: "https://nextjs.novapay.wowtheme7.com/images/meta.png",
+          url: "https://novapays.co/images/meta.png",
           width: 1200,
           height: 630,
-          alt: "NovaPay",
+          alt: "Contact NovaPays - Get in Touch",
         },
       ],
     },

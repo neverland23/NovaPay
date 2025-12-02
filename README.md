@@ -1,4 +1,4 @@
-# NovaPay - Full Stack Payment Platform
+# NovaPays - Full Stack Payment Platform
 
 A professional-grade full-stack web application built with Next.js 14 App Router, React 18, MongoDB, Redux Toolkit, and JWT authentication.
 
@@ -68,9 +68,9 @@ Create a `.env.local` file in the root directory with the following variables:
 
 ```env
 # MongoDB
-MONGODB_URI=mongodb://localhost:27017/novapay
+MONGODB_URI=mongodb://localhost:27017/novapays
 # Or for MongoDB Atlas:
-# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/novapay
+# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/novapays
 
 # JWT Secrets
 JWT_SECRET=your-super-secret-jwt-key-change-in-production

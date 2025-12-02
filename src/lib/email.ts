@@ -21,7 +21,7 @@ export const sendVerificationEmail = async (
       console.log('📧 EMAIL VERIFICATION (Development Mode)');
       console.log('='.repeat(60));
       console.log(`To: ${email}`);
-      console.log(`Subject: Verify Your NovaPay Account`);
+      console.log(`Subject: Verify Your NovaPays Account`);
       console.log(`Verification Link: ${verificationUrl}`);
       console.log('='.repeat(60));
       console.log('\n⚠️  To send real emails, configure RESEND_API_KEY in .env.local\n');
@@ -29,9 +29,9 @@ export const sendVerificationEmail = async (
     }
 
     const { data, error } = await resend.emails.send({
-      from: process.env.EMAIL_FROM || `NovaPay <${fromEmail}>`,
+      from: process.env.EMAIL_FROM || `NovaPays <${fromEmail}>`,
       to: [email],
-      subject: 'Verify Your NovaPay Account',
+      subject: 'Verify Your NovaPays Account',
       html: `
         <!DOCTYPE html>
         <html>
@@ -41,35 +41,35 @@ export const sendVerificationEmail = async (
         </head>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; text-align: center; border-radius: 10px 10px 0 0;">
-            <h1 style="color: white; margin: 0;">NovaPay</h1>
+            <h1 style="color: white; margin: 0;">NovaPays</h1>
           </div>
           <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px;">
-            <h2 style="color: #333; margin-top: 0;">Welcome to NovaPay, ${name}!</h2>
-            <p>Thank you for registering with NovaPay. To complete your registration and start using your account, please verify your email address by clicking the button below:</p>
+            <h2 style="color: #333; margin-top: 0;">Welcome to NovaPays, ${name}!</h2>
+            <p>Thank you for registering with NovaPays. To complete your registration and start using your account, please verify your email address by clicking the button below:</p>
             <div style="text-align: center; margin: 30px 0;">
               <a href="${verificationUrl}" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold;">Verify Email Address</a>
             </div>
             <p style="color: #666; font-size: 14px;">Or copy and paste this link into your browser:</p>
             <p style="color: #667eea; font-size: 12px; word-break: break-all;">${verificationUrl}</p>
             <p style="color: #666; font-size: 14px; margin-top: 30px;">This link will expire in 24 hours.</p>
-            <p style="color: #666; font-size: 14px;">If you didn't create an account with NovaPay, please ignore this email.</p>
+            <p style="color: #666; font-size: 14px;">If you didn't create an account with NovaPays, please ignore this email.</p>
           </div>
           <div style="text-align: center; margin-top: 20px; color: #999; font-size: 12px;">
-            <p>&copy; ${new Date().getFullYear()} NovaPay. All rights reserved.</p>
+            <p>&copy; ${new Date().getFullYear()} NovaPays. All rights reserved.</p>
           </div>
         </body>
         </html>
       `,
       text: `
-        Welcome to NovaPay, ${name}!
+        Welcome to NovaPays, ${name}!
         
-        Thank you for registering with NovaPay. To complete your registration, please verify your email address by visiting the following link:
+        Thank you for registering with NovaPays. To complete your registration, please verify your email address by visiting the following link:
         
         ${verificationUrl}
         
         This link will expire in 24 hours.
         
-        If you didn't create an account with NovaPay, please ignore this email.
+        If you didn't create an account with NovaPays, please ignore this email.
       `,
     });
 
@@ -112,9 +112,9 @@ export const sendResendVerificationEmail = async (
     }
 
     const { data, error } = await resend.emails.send({
-      from: process.env.EMAIL_FROM || `NovaPay <${fromEmail}>`,
+      from: process.env.EMAIL_FROM || `NovaPays <${fromEmail}>`,
       to: [email],
-      subject: 'Verify Your NovaPay Account - New Verification Link',
+      subject: 'Verify Your NovaPays Account - New Verification Link',
       html: `
         <!DOCTYPE html>
         <html>
@@ -124,7 +124,7 @@ export const sendResendVerificationEmail = async (
         </head>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; text-align: center; border-radius: 10px 10px 0 0;">
-            <h1 style="color: white; margin: 0;">NovaPay</h1>
+            <h1 style="color: white; margin: 0;">NovaPays</h1>
           </div>
           <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px;">
             <h2 style="color: #333; margin-top: 0;">New Verification Link</h2>
@@ -138,7 +138,7 @@ export const sendResendVerificationEmail = async (
             <p style="color: #666; font-size: 14px; margin-top: 30px;">This link will expire in 24 hours.</p>
           </div>
           <div style="text-align: center; margin-top: 20px; color: #999; font-size: 12px;">
-            <p>&copy; ${new Date().getFullYear()} NovaPay. All rights reserved.</p>
+            <p>&copy; ${new Date().getFullYear()} NovaPays. All rights reserved.</p>
           </div>
         </body>
         </html>

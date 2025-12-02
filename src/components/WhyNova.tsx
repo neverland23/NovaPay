@@ -11,21 +11,21 @@ const WhyNova: React.FC = () => {
               data-aos='fade-up'
               data-aos-duration={800}
             >
-              WHY NOVAPAY
+              WHY NOVAPAYS
             </h2>
             <p
               className='max-w-322 text-dark-500 tw-text-lg fw-normal mx-auto'
               data-aos='fade-up'
               data-aos-duration={1000}
             >
-              NovaPay is constantly growing for a World without high fees.
+              NovaPays is constantly growing for a World without high fees.
             </p>
           </div>
         </div>
         <div className='row gy-4'>
           <div className='col-xl-4 col-lg-4 col-md-6'>
             <div
-              className='paynone-card-one max-w-307 novapay-card tw-px-8 py-80 bg-warning-500 rounded-4 margin-block-start--120px'
+              className='paynone-card-one max-w-307 novapays-card tw-px-8 py-80 bg-warning-500 rounded-4 margin-block-start--120px'
               data-aos='fade-up'
               data-aos-duration={800}
             >
@@ -41,7 +41,7 @@ const WhyNova: React.FC = () => {
           </div>
           <div className='col-xl-4 col-lg-4 col-md-6'>
             <div
-              className='paynone-card-two max-w-307 novapay-card tw-ps-7 tw-pe-8 tw-pt-12 tw-pb-10 bg-base-two-600 rounded-4 margin-inline-start--45px margin-block-start-200px'
+              className='paynone-card-two max-w-307 novapays-card tw-ps-7 tw-pe-8 tw-pt-12 tw-pb-10 bg-base-two-600 rounded-4 margin-inline-start--45px margin-block-start-200px'
               data-aos='fade-up'
               data-aos-duration={800}
             >
@@ -64,7 +64,7 @@ const WhyNova: React.FC = () => {
           </div>
           <div className='col-xl-4 col-lg-4 col-md-6'>
             <div
-              className='paynone-card-three max-w-307 novapay-card tw-ps-7 tw-pe-8 tw-pt-12 tw-pb-10 bg-base-two-600 rounded-4 margin-block-start--200px margin-inline-start-100px'
+              className='paynone-card-three max-w-307 novapays-card tw-ps-7 tw-pe-8 tw-pt-12 tw-pb-10 bg-base-two-600 rounded-4 margin-block-start--200px margin-inline-start-100px'
               data-aos='fade-up'
               data-aos-duration={800}
             >
@@ -87,7 +87,7 @@ const WhyNova: React.FC = () => {
           </div>
           <div className='col-xl-4 col-lg-4 col-md-6'>
             <div
-              className='paynone-card-four max-w-307 novapay-card tw-px-8 py-80 bg-warning-500 rounded-4 margin-block-start-70px'
+              className='paynone-card-four max-w-307 novapays-card tw-px-8 py-80 bg-warning-500 rounded-4 margin-block-start-70px'
               data-aos='fade-up'
               data-aos-duration={800}
             >
@@ -103,7 +103,7 @@ const WhyNova: React.FC = () => {
           </div>
           <div className='col-xl-4 col-lg-4 col-md-6'>
             <div
-              className='paynone-card-five max-w-307 novapay-card tw-ps-7 tw-pe-8 tw-pt-12 tw-pb-10 bg-base-two-600 rounded-4 margin-inline-start-107px margin-block-start-176px'
+              className='paynone-card-five max-w-307 novapays-card tw-ps-7 tw-pe-8 tw-pt-12 tw-pb-10 bg-base-two-600 rounded-4 margin-inline-start-107px margin-block-start-176px'
               data-aos='fade-up'
               data-aos-duration={800}
             >
@@ -126,7 +126,7 @@ const WhyNova: React.FC = () => {
           </div>
           <div className='col-xl-4 col-lg-4 col-md-6'>
             <div
-              className='paynone-card-six max-w-307 novapay-card tw-px-8 py-80 bg-warning-500 rounded-4 margin-inline-start-100px margin-block-start--200px'
+              className='paynone-card-six max-w-307 novapays-card tw-px-8 py-80 bg-warning-500 rounded-4 margin-inline-start-100px margin-block-start--200px'
               data-aos='fade-up'
               data-aos-duration={800}
             >

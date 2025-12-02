@@ -11,21 +11,21 @@ import PricingPlan from "@/components/PricingPlan";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Pricing Plan | NovaPay",
+    title: "Pricing Plans | NovaPays - Transparent Fees & Rates",
     description:
-      "This is NovaPay Pricing Plan",
+      "Compare NovaPays pricing plans and choose the best option for your needs. Transparent fee structure with competitive exchange rates, no hidden charges, and flexible plans for individuals and businesses. See our rates and start saving on money transfers today.",
     openGraph: {
-      title: "Pricing Plan | NovaPay",
+      title: "Pricing Plans | NovaPays - Transparent Fees & Rates",
       description:
-        "This is NovaPay Pricing Plan",
-      url: "https://novapay.co/pricing-plan",
+        "Compare NovaPays pricing plans and choose the best option for your needs. Transparent fee structure with competitive exchange rates, no hidden charges, and flexible plans for individuals and businesses. See our rates and start saving on money transfers today.",
+      url: "https://novapays.co/pricing-plan",
       type: "website",
       images: [
         {
-          url: "https://nextjs.novapay.wowtheme7.com/images/meta.png",
+          url: "https://novapays.co/images/meta.png",
           width: 1200,
           height: 630,
-          alt: "NovaPay",
+          alt: "NovaPays Pricing Plans - Transparent Fees & Rates",
         },
       ],
     },

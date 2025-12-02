@@ -6,7 +6,7 @@ const DashboardFooter: React.FC = () => {
       <div className='container'>
         <div className='d-flex align-items-center tw-gap-6 justify-content-between flex-wrap'>
           <p className='text-dark-600 fw-normal tw-text-lg '>
-            Copyright @ {new Date().getFullYear()} NovaPay
+            Copyright @ {new Date().getFullYear()} NovaPays
           </p>
           {/* <ul className='d-flex align-items-center tw-gap-2 flex-wrap'>
             <li>

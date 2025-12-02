@@ -6,21 +6,21 @@ import PricingPlan from "@/components/PricingPlan";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Dashboard - Pricing Plan | NovaPay",
+    title: "Pricing Plans | NovaPays Dashboard",
     description:
-      "This is NovaPay Dashboard Pricing Plan",
+      "View and compare NovaPays pricing plans from your dashboard. See current exchange rates, transaction fees, and plan benefits. Upgrade or change your plan to get the best rates and features for your payment needs.",
     openGraph: {
-      title: "Dashboard - Pricing Plan | NovaPay",
+      title: "Pricing Plans | NovaPays Dashboard",
       description:
-        "This is NovaPay Dashboard Pricing Plan",
-      url: "https://novapay.co/dashboard-pricing-plan",
+        "View and compare NovaPays pricing plans from your dashboard. See current exchange rates, transaction fees, and plan benefits. Upgrade or change your plan to get the best rates and features for your payment needs.",
+      url: "https://novapays.co/dashboard-pricing-plan",
       type: "website",
       images: [
         {
-          url: "https://novapay.co/images/meta.png",
+          url: "https://novapays.co/images/meta.png",
           width: 1200,
           height: 630,
-          alt: "NovaPay",
+          alt: "NovaPays Pricing Plans - Dashboard",
         },
       ],
     },

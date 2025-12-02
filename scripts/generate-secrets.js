@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Generate secure random secrets for NovaPay
+ * Generate secure random secrets for NovaPays
  * Usage: node scripts/generate-secrets.js
  */
 
@@ -11,7 +11,7 @@ function generateSecret() {
   return crypto.randomBytes(32).toString('hex');
 }
 
-console.log('\n🔐 Generating secure secrets for NovaPay...\n');
+console.log('\n🔐 Generating secure secrets for NovaPays...\n');
 console.log('═══════════════════════════════════════════════════\n');
 
 const secrets = {

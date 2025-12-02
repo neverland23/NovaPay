@@ -36,7 +36,7 @@ Copy the output and save it somewhere temporarily.
 ```bash
 cat > .env.local << 'EOF'
 # MongoDB - Use local MongoDB
-MONGODB_URI=mongodb://localhost:27017/novapay
+MONGODB_URI=mongodb://localhost:27017/novapays
 
 # JWT Secrets - Paste from Step 1
 JWT_SECRET=

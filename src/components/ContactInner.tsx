@@ -33,7 +33,7 @@ const ContactInner: React.FC = () => {
                     Email Us Anytime
                   </h4>
                   <span className='fw-normal tw-text-lg text-dark-500 tw-duration-500 group-hover-text-white '>
-                    support@novapay.co
+                    support@novapays.co
                   </span>
                 </div>
               </div>

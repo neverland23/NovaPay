@@ -1,6 +1,6 @@
 # ⚡ Quick Start Guide
 
-Follow these steps to get NovaPay running in **10 minutes**!
+Follow these steps to get NovaPays running in **10 minutes**!
 
 ## 🚀 Quick Setup (10 Minutes)
 
@@ -39,7 +39,7 @@ node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ### 4️⃣ Create .env.local (2 min)
 ```bash
 cat > .env.local << 'EOF'
-MONGODB_URI=mongodb://localhost:27017/novapay
+MONGODB_URI=mongodb://localhost:27017/novapays
 JWT_SECRET=paste-generated-secret-1
 JWT_REFRESH_SECRET=paste-generated-secret-2
 AUTH_SECRET=paste-generated-secret-3

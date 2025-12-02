@@ -6,21 +6,21 @@ import DashboardContactUs from "@/components/DashboardContactUs";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Contact Us | NovaPay",
+    title: "Contact Support | NovaPays Dashboard",
     description:
-      "This is NovaPay Contact Us",
+      "Need help with your NovaPays account? Contact our support team directly from your dashboard. Get assistance with transactions, account issues, payment problems, or technical support. We're here to help you 24/7.",
     openGraph: {
-      title: "Contact Us | NovaPay",
+      title: "Contact Support | NovaPays Dashboard",
       description:
-        "This is NovaPay Dashboard",
-      url: "https://novapay.co/dashboard",
+        "Need help with your NovaPays account? Contact our support team directly from your dashboard. Get assistance with transactions, account issues, payment problems, or technical support. We're here to help you 24/7.",
+      url: "https://novapays.co/dashboard-contact",
       type: "website",
       images: [
         {
-          url: "https://novapay.co/images/meta.png",
+          url: "https://novapays.co/images/meta.png",
           width: 1200,
           height: 630,
-          alt: "NovaPay",
+          alt: "NovaPays Contact Support - Dashboard",
         },
       ],
     },

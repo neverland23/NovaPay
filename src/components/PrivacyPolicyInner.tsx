@@ -22,7 +22,7 @@ const PrivacyPolicyInner: React.FC = () => {
                 data-aos='fade-up'
                 data-aos-duration={600}
               >
-                NovaPay — Privacy Policy
+                NovaPays — Privacy Policy
               </h2>
               <p
                 className='fw-semibold tw-text-xl text-white bg-base-two-600 tw-px-8 tw-py-8 tw-rounded-md text-center'
@@ -42,7 +42,7 @@ const PrivacyPolicyInner: React.FC = () => {
                   1. Introduction
                 </span>
                 <p className='fw-normal tw-text-lg text-dark-500 '>
-                  NovaPay (“we,” “us,” or “our”) is committed to protecting your privacy and securing your personal and financial information. This Privacy Policy outlines how we collect, use, and protect your data when using our financial services. 
+                  NovaPays (“we,” “us,” or “our”) is committed to protecting your privacy and securing your personal and financial information. This Privacy Policy outlines how we collect, use, and protect your data when using our financial services. 
                 </p>
               </div>
               <div
@@ -113,7 +113,7 @@ const PrivacyPolicyInner: React.FC = () => {
                   <span className="dot-item">Compliance & Legal: As required by regulators, law enforcement, or court orders</span>
                   <span className="dot-item">Business Transfers: During mergers, acquisitions, or corporate restructuring</span>
                   <span className="dot-item">With Your Consent: When you authorize sharing</span>
-                  <span className="dot-item">Security: To prevent fraud or protect NovaPay and its users</span>
+                  <span className="dot-item">Security: To prevent fraud or protect NovaPays and its users</span>
                 </p>
               </div>
               <div
@@ -160,7 +160,7 @@ const PrivacyPolicyInner: React.FC = () => {
                   7. Cookies & Tracking Technologies
                 </span>
                 <p className='fw-normal tw-text-lg text-dark-500 '>
-                  NovaPay uses cookies to improve performance, enhance user experience, and analyze usage. You may disable cookies, but some features may not function properly.
+                  NovaPays uses cookies to improve performance, enhance user experience, and analyze usage. You may disable cookies, but some features may not function properly.
                 </p>
               </div>
               <div
@@ -172,7 +172,7 @@ const PrivacyPolicyInner: React.FC = () => {
                   8. Children’s Privacy
                 </span>
                 <p className='fw-normal tw-text-lg text-dark-500 '>
-                  NovaPay is not intended for individuals under 18. We do not knowingly collect data from minors.
+                  NovaPays is not intended for individuals under 18. We do not knowingly collect data from minors.
                 </p>
               </div>
               <div
@@ -196,7 +196,7 @@ const PrivacyPolicyInner: React.FC = () => {
                   10. Changes to Privacy Policy
                 </span>
                 <p className='fw-normal tw-text-lg text-dark-500 '>
-                  We may update this Privacy Policy at any time. Continued use of NovaPay after updates indicates acceptance of the revised policy.
+                  We may update this Privacy Policy at any time. Continued use of NovaPays after updates indicates acceptance of the revised policy.
                 </p>
               </div>
               <div
@@ -209,7 +209,7 @@ const PrivacyPolicyInner: React.FC = () => {
                 </span>
                 <p className='fw-normal tw-text-lg text-dark-500 '>
                   For privacy-related questions or requests, contact us at: <br></br>
-                  support@novapay.co
+                  support@novapays.co
                 </p>
               </div>
             </div>

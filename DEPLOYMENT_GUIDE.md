@@ -1,6 +1,6 @@
-# Vercel Deployment Guide for NovaPay
+# Vercel Deployment Guide for NovaPays
 
-This guide will walk you through setting up automated deployments to Vercel using GitHub Actions for your NovaPay project.
+This guide will walk you through setting up automated deployments to Vercel using GitHub Actions for your NovaPays project.
 
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
@@ -30,7 +30,7 @@ Before you begin, ensure you have:
 2. Click **"Add New..."** → **"Project"**
 3. Import your GitHub repository
 4. Configure the project:
-   - **Project Name**: `novapay` (or your preferred name)
+   - **Project Name**: `NovaPays` (or your preferred name)
    - **Framework Preset**: Next.js
    - **Root Directory**: `./` (or leave default)
    - **Build Command**: `npm run build`
@@ -201,7 +201,7 @@ Based on your project structure, add these to Vercel:
 **Important**: 
 - Add `NEXT_PUBLIC_APP_URL` to **both** GitHub Secrets (for build) **and** Vercel (for runtime)
 - All other variables should **only** be in Vercel (not GitHub Secrets)
-- Use your actual production URL for `NEXT_PUBLIC_APP_URL` (e.g., `https://novapay.vercel.app`)
+- Use your actual production URL for `NEXT_PUBLIC_APP_URL` (e.g., `https://novapays.vercel.app`)
 
 ---
 
@@ -347,6 +347,6 @@ If you encounter issues not covered in this guide:
 ---
 
 **Last Updated**: $(date)
-**Project**: NovaPay
+**Project**: NovaPays
 **Framework**: Next.js 15.5.3
 **Branch**: master

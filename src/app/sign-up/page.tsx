@@ -6,21 +6,21 @@ import SignUpInner from "@/components/SignUpInner";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Sign-up | NovaPay",
+    title: "Sign Up | NovaPays - Create Your Account",
     description:
-      "This is NovaPay Sign UP",
+      "Join NovaPays today and start sending money securely worldwide. Create your free account in minutes with email verification. Enjoy fast transfers, competitive rates, and 24/7 customer support. Sign up now and experience the future of digital payments.",
     openGraph: {
-      title: "Sign-up | NovaPay",
+      title: "Sign Up | NovaPays - Create Your Account",
       description:
-        "This is NovaPay Sign UP",
-      url: "https://novapay.co/sign-up",
+        "Join NovaPays today and start sending money securely worldwide. Create your free account in minutes with email verification. Enjoy fast transfers, competitive rates, and 24/7 customer support. Sign up now and experience the future of digital payments.",
+      url: "https://novapays.co/sign-up",
       type: "website",
       images: [
         {
-          url: "https://novapay.co/images/meta.png",
+          url: "https://novapays.co/images/meta.png",
           width: 1200,
           height: 630,
-          alt: "NovaPay",
+          alt: "Sign Up for NovaPays - Create Your Account",
         },
       ],
     },

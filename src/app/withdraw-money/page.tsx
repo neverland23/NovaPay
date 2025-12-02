@@ -6,21 +6,21 @@ import DashboardWithdrawMoney from "@/components/DashboardWithdrawMoney";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Withdraw Money | NovaPay",
+    title: "Withdraw Money | NovaPays - Cash Out Funds",
     description:
-      "This is NovaPay Withdraw Money",
+      "Withdraw money from your NovaPays account to your bank account or digital wallet. Fast and secure withdrawals with multiple payment methods, competitive fees, and real-time processing. Get your money when you need it.",
     openGraph: {
-      title: "Withdraw Money | NovaPay",
+      title: "Withdraw Money | NovaPays - Cash Out Funds",
       description:
-        "This is NovaPay Withdraw Money",
-      url: "https://novapay.co/withdraw-money",
+        "Withdraw money from your NovaPays account to your bank account or digital wallet. Fast and secure withdrawals with multiple payment methods, competitive fees, and real-time processing. Get your money when you need it.",
+      url: "https://novapays.co/withdraw-money",
       type: "website",
       images: [
         {
-          url: "https://novapay.co/images/meta.png",
+          url: "https://novapays.co/images/meta.png",
           width: 1200,
           height: 630,
-          alt: "NovaPay",
+          alt: "NovaPays Withdraw Money - Cash Out Funds",
         },
       ],
     },

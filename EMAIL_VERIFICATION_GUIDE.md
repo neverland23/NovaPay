@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide explains how the email verification flow works in NovaPay and how to configure it.
+This guide explains how the email verification flow works in NovaPays and how to configure it.
 
 ## ✅ What Has Been Implemented
 
@@ -46,7 +46,7 @@ By default, the app runs in development mode where emails are logged to the cons
 📧 EMAIL VERIFICATION (Development Mode)
 ============================================================
 To: user@example.com
-Subject: Verify Your NovaPay Account
+Subject: Verify Your NovaPays Account
 Verification Link: http://localhost:3000/verify-email?token=...
 ============================================================
 ```
@@ -65,7 +65,7 @@ This application uses **Resend** for sending emails. Resend is a modern, develop
 
 1. Go to [Resend API Keys](https://resend.com/api-keys)
 2. Click "Create API Key"
-3. Give it a name (e.g., "NovaPay Production")
+3. Give it a name (e.g., "NovaPays Production")
 4. Copy the API key (starts with `re_`)
 
 #### Step 3: Add Domain (Optional but Recommended)
@@ -91,7 +91,7 @@ RESEND_API_KEY=re_your_api_key_here
 RESEND_FROM_EMAIL=noreply@yourdomain.com
 
 # Optional: Custom "from" name
-EMAIL_FROM="NovaPay" <noreply@yourdomain.com>
+EMAIL_FROM="NovaPays" <noreply@yourdomain.com>
 
 # Required: Your app URL
 NEXT_PUBLIC_APP_URL=http://localhost:3000
@@ -100,8 +100,8 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 **Example `.env.local`:**
 ```env
 RESEND_API_KEY=re_abc123xyz789
-RESEND_FROM_EMAIL=noreply@novapay.com
-EMAIL_FROM="NovaPay" <noreply@novapay.com>
+RESEND_FROM_EMAIL=noreply@novapays.com
+EMAIL_FROM="NovaPays" <noreply@novapays.com>
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```
 
@@ -251,7 +251,7 @@ RESEND_API_KEY=re_your_api_key_here
 RESEND_FROM_EMAIL=noreply@yourdomain.com
 
 # Optional: Custom "from" name and email
-EMAIL_FROM="NovaPay" <noreply@yourdomain.com>
+EMAIL_FROM="NovaPays" <noreply@yourdomain.com>
 ```
 
 **Quick Setup:**

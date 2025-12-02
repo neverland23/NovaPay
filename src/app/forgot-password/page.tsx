@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { toast } from "react-toastify";

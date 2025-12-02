@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 
-const Page: React.FC = () => {
+const VerifyEmailContent: React.FC = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [email, setEmail] = useState("");
@@ -25,15 +25,7 @@ const Page: React.FC = () => {
     }
   }, [searchParams]);
 
-  // Check if token is in URL and verify automatically
-  useEffect(() => {
-    const token = searchParams.get('token');
-    if (token) {
-      verifyEmail(token);
-    }
-  }, [searchParams]);
-
-  const verifyEmail = async (token: string) => {
+  const verifyEmail = useCallback(async (token: string) => {
     setIsVerifying(true);
     setVerificationStatus('idle');
     setErrorMessage("");
@@ -67,7 +59,15 @@ const Page: React.FC = () => {
     } finally {
       setIsVerifying(false);
     }
-  };
+  }, [router]);
+
+  // Check if token is in URL and verify automatically
+  useEffect(() => {
+    const token = searchParams.get('token');
+    if (token) {
+      verifyEmail(token);
+    }
+  }, [searchParams, verifyEmail]);
 
   const handleResend = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -294,6 +294,37 @@ const Page: React.FC = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const Page: React.FC = () => {
+  return (
+    <Suspense fallback={
+      <section className='position-relative'>
+        <div className='d-flex tw-h-screen'>
+          <div className='flex-grow-1'>
+            <div className='max-w-526-px w-100 log-in-card tw-px-6 tw-py-12 mx-auto'>
+              <Link href='/' className='tw-mb-17'>
+                <Image
+                  src='/assets/images/logo/logo.png'
+                  alt='img'
+                  className='tw-h-13'
+                  width={171}
+                  height={52}
+                />
+              </Link>
+              <div className='text-center'>
+                <div className="spinner-border text-primary" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    }>
+      <VerifyEmailContent />
+    </Suspense>
   );
 };
 

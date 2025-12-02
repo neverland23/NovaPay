@@ -12,21 +12,21 @@ import OurBank from "@/components/OurBank";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "About | NovaPay",
+    title: "About Us | NovaPays - Your Trusted Payment Partner",
     description:
-      "This is Nova About",
+      "Learn about NovaPays's mission to revolutionize digital payments. We provide secure, fast, and transparent money transfer services with cutting-edge technology and exceptional customer support. Discover our story, values, and commitment to financial innovation.",
     openGraph: {
-      title: "About | NovaPay",
+      title: "About Us | NovaPays - Your Trusted Payment Partner",
       description:
-        "This is Nova About",
-      url: "https://novapay.co/about",
+        "Learn about NovaPays's mission to revolutionize digital payments. We provide secure, fast, and transparent money transfer services with cutting-edge technology and exceptional customer support. Discover our story, values, and commitment to financial innovation.",
+      url: "https://novapays.co/about-us",
       type: "website",
       images: [
         {
-          url: "https://novapay.co/images/meta.png",
+          url: "https://novapays.co/images/meta.png",
           width: 1200,
           height: 630,
-          alt: "NovaPay",
+          alt: "About NovaPays - Your Trusted Payment Partner",
         },
       ],
     },

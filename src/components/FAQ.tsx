@@ -170,7 +170,7 @@ const FAQ: React.FC = () => {
                       aria-expanded='true'
                       aria-controls='collapseOne'
                     >
-                      What is NovaPay?
+                      What is NovaPays?
                     </button>
                   </h2>
                   <div
@@ -180,7 +180,7 @@ const FAQ: React.FC = () => {
                   >
                     <div className='accordion-body'>
                       <p className='fw-normal tw-text-lg text-dark-600'>
-                        NovaPay is a global banking and payment platform that provides users with their own USD and EUR accounts to send, receive, withdraw, and manage money across 100+ countries. We support traditional banking rails as well as modern digital payment channels like crypto withdrawals.
+                        NovaPays is a global banking and payment platform that provides users with their own USD and EUR accounts to send, receive, withdraw, and manage money across 100+ countries. We support traditional banking rails as well as modern digital payment channels like crypto withdrawals.
                       </p>
                     </div>
                   </div>
@@ -199,7 +199,7 @@ const FAQ: React.FC = () => {
                       aria-expanded='false'
                       aria-controls='collapseTwo'
                     >
-                      Who can open a NovaPay account?
+                      Who can open a NovaPays account?
                     </button>
                   </h2>
                   <div
@@ -267,7 +267,7 @@ const FAQ: React.FC = () => {
                       aria-expanded='true'
                       aria-controls='collapseOnee'
                     >
-                      What are the main benefits of using NovaPay?
+                      What are the main benefits of using NovaPays?
                     </button>
                   </h2>
                   <div
@@ -325,7 +325,7 @@ const FAQ: React.FC = () => {
                       aria-expanded='false'
                       aria-controls='collapseThree2'
                     >
-                      Does NovaPay support business use?
+                      Does NovaPays support business use?
                     </button>
                   </h2>
                   <div
@@ -393,7 +393,7 @@ const FAQ: React.FC = () => {
                       aria-expanded='false'
                       aria-controls='collapseTwooo'
                     >
-                      How can I withdraw money from my NovaPay account?
+                      How can I withdraw money from my NovaPays account?
                     </button>
                   </h2>
                   <div

@@ -119,7 +119,7 @@ const LoginInInner: React.FC = () => {
               />
             </Link>
             <h4 className='fw-medium text-primary-50 tw-mb-8'>
-              Welcome back to NovaPay
+              Welcome back to NovaPays
             </h4>
             <form onSubmit={handleSubmit}>
               <button

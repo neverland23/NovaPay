@@ -1,6 +1,6 @@
-# 🚀 NovaPay - Complete Setup Guide
+# 🚀 NovaPays - Complete Setup Guide
 
-This guide will walk you through setting up the NovaPay project from scratch.
+This guide will walk you through setting up the NovaPays project from scratch.
 
 ## 📋 Table of Contents
 
@@ -120,7 +120,7 @@ mongosh --eval "db.adminCommand('ping')"
 
 **Connection String:**
 ```
-mongodb://localhost:27017/novapay
+mongodb://localhost:27017/novapays
 ```
 
 ### Option B: MongoDB Atlas (Cloud - Recommended for Production)
@@ -169,7 +169,7 @@ mongodb://localhost:27017/novapay
 5. Replace `<username>` and `<password>` with your database user credentials
 6. Add database name at the end:
    ```
-   mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/novapay?retryWrites=true&w=majority
+   mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/novapays?retryWrites=true&w=majority
    ```
 
 **Save this connection string** - you'll use it in Step 3!
@@ -198,10 +198,10 @@ Open `.env.local` and add the following:
 ```env
 # MongoDB Connection
 # For Local MongoDB:
-MONGODB_URI=mongodb://localhost:27017/novapay
+MONGODB_URI=mongodb://localhost:27017/novapays
 
 # For MongoDB Atlas, use your connection string:
-# MONGODB_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/novapay?retryWrites=true&w=majority
+# MONGODB_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/novapays?retryWrites=true&w=majority
 
 # JWT Secrets - Generate secure random strings (at least 32 characters)
 
@@ -257,7 +257,7 @@ Replace `MONGODB_URI` with your actual connection string from Step 2.
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Click the project dropdown at the top
 3. Click **"New Project"**
-4. Enter project name: `NovaPay` (or any name)
+4. Enter project name: `NovaPays` (or any name)
 5. Click **"Create"**
 6. Wait for project creation, then select it
 
@@ -280,7 +280,7 @@ Replace `MONGODB_URI` with your actual connection string from Step 2.
 2. Choose **"External"** user type (unless you have Google Workspace)
 3. Click **"Create"**
 4. Fill in the required information:
-   - **App name**: NovaPay
+   - **App name**: NovaPays
    - **User support email**: Your email
    - **Developer contact email**: Your email
 5. Click **"Save and Continue"**
@@ -295,7 +295,7 @@ Replace `MONGODB_URI` with your actual connection string from Step 2.
 2. Click **"+ CREATE CREDENTIALS"**
 3. Select **"OAuth client ID"**
 4. Choose application type: **"Web application"**
-5. Enter a name: `NovaPay Web Client`
+5. Enter a name: `NovaPays Web Client`
 6. Add **Authorized redirect URIs**:
    - For development: `http://localhost:3000/api/auth/google`
    - For production: `https://yourdomain.com/api/auth/google`
@@ -379,7 +379,7 @@ Check if data is being saved:
 
 **If using local MongoDB:**
 ```bash
-mongosh novapay
+mongosh novapays
 > db.users.find().pretty()
 ```
 
@@ -388,7 +388,7 @@ You should see your registered user.
 **If using MongoDB Atlas:**
 1. Go to MongoDB Atlas dashboard
 2. Click **"Browse Collections"**
-3. You should see `novapay` database with `users` collection
+3. You should see `novapays` database with `users` collection
 
 ---
 

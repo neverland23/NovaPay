@@ -14,21 +14,21 @@ import Footer from "@/components/Footer";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Home | NovaPay",
+    title: "Home | NovaPays - Secure Digital Payment Platform",
     description:
-      "This is NovaPay Home",
+      "NovaPays is a modern digital payment platform offering secure money transfers, remittance services, and online transactions. Experience fast, reliable, and secure financial services with competitive exchange rates and transparent pricing.",
     openGraph: {
-      title: "Home | NovaPay",
+      title: "Home | NovaPays - Secure Digital Payment Platform",
       description:
-        "This is NovaPay Home",
-      url: "https://novapay.co",
+        "NovaPays is a modern digital payment platform offering secure money transfers, remittance services, and online transactions. Experience fast, reliable, and secure financial services with competitive exchange rates and transparent pricing.",
+      url: "https://novapays.co",
       type: "website",
       images: [
         {
-          url: "https://novapay.co/images/meta.png",
+          url: "https://novapays.co/images/meta.png",
           width: 1200,
           height: 630,
-          alt: "NovaPay",
+          alt: "NovaPays - Secure Digital Payment Platform",
         },
       ],
     },

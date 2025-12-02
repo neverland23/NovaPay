@@ -26,7 +26,7 @@ const OurFeature: React.FC = () => {
                 data-aos='fade-up'
                 data-aos-duration={1000}
               >
-                NovaPay Features
+                NovaPays Features
               </h2>
             </div>
             <div className='max-w-400'>

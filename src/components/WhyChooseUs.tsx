@@ -58,7 +58,7 @@ const WhyChooseUs: React.FC = () => {
                   Unlimited Payroll & Platform Payments
                 </h4>
                 <p className='fw-normal tw-text-lg text-dark-500 '>
-                  NovaPay lets you receive unlimited, compliant payroll payouts from verified employers and major platforms like Gusto, Upwork, Rippling, Fiverr, and Payoneer—giving you unrestricted access to your global earnings.
+                  NovaPays lets you receive unlimited, compliant payroll payouts from verified employers and major platforms like Gusto, Upwork, Rippling, Fiverr, and Payoneer—giving you unrestricted access to your global earnings.
                 </p>
               </div>
             </div>
@@ -84,7 +84,7 @@ const WhyChooseUs: React.FC = () => {
                   Provide Accurate Account Details
                 </h4>
                 <p className='fw-normal tw-text-lg text-dark-500 '>
-                  Ensure that all payments include your exact NovaPay account details, as any incorrect or incomplete information may cause the transfer to be rejected or canceled.
+                  Ensure that all payments include your exact NovaPays account details, as any incorrect or incomplete information may cause the transfer to be rejected or canceled.
                 </p>
               </div>
             </div>

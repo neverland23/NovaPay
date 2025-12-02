@@ -6,21 +6,21 @@ import DashboardRequestMoney from "@/components/DashboardRequestMoney";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Dashboard - Request Money | NovaPay",
+    title: "Request Money | NovaPays - Send Payment Requests",
     description:
-      "This is NovaPay Dashboard Request Money",
+      "Request money from friends, family, or clients through NovaPays. Send secure payment requests via email, set custom amounts, add notes, and track request status. Fast and easy way to collect payments online.",
     openGraph: {
-      title: "Dashboard - Request Money | NovaPay",
+      title: "Request Money | NovaPays - Send Payment Requests",
       description:
-        "This is NovaPay Dashboard Request Money",
-      url: "https://novapay.co/request-money",
+        "Request money from friends, family, or clients through NovaPays. Send secure payment requests via email, set custom amounts, add notes, and track request status. Fast and easy way to collect payments online.",
+      url: "https://novapays.co/request-money",
       type: "website",
       images: [
         {
-          url: "https://novapay.co/images/meta.png",
+          url: "https://novapays.co/images/meta.png",
           width: 1200,
           height: 630,
-          alt: "NovaPay",
+          alt: "NovaPays Request Money - Send Payment Requests",
         },
       ],
     },
