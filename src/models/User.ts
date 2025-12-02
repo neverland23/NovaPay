@@ -58,7 +58,7 @@ const UserSchema = new Schema<IUser>(
     email: {
       type: String,
       required: [true, 'Email is required'],
-      unique: true,
+      unique: true, // unique: true automatically creates an index
       lowercase: true,
       trim: true,
       match: [/^\S+@\S+\.\S+$/, 'Please provide a valid email address'],
@@ -71,7 +71,7 @@ const UserSchema = new Schema<IUser>(
     googleId: {
       type: String,
       sparse: true,
-      unique: true,
+      unique: true, // unique: true automatically creates an index
     },
     firstName: {
       type: String,
@@ -117,10 +117,6 @@ const UserSchema = new Schema<IUser>(
     timestamps: true,
   }
 );
-
-// Indexes
-UserSchema.index({ email: 1 });
-UserSchema.index({ googleId: 1 });
 
 // Hash password before saving and update passwordLastChanged
 UserSchema.pre('save', async function (next) {

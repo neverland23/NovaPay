@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import type { Metadata } from "next";
 import AOSWrap from "@/helper/AOSWrap";
 import Preloader from "@/helper/Preloader";
@@ -33,8 +33,10 @@ const Page: React.FC = () => {
       {/* <Preloader /> */}
       <Preloader />
 
-      {/* LoginInInner */}
-      <LoginInInner />
+      {/* LoginInInner wrapped in Suspense for useSearchParams */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <LoginInInner />
+      </Suspense>
     </AOSWrap>
   );
 };

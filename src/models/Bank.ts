@@ -22,7 +22,7 @@ const BankSchema = new Schema<IBank>(
       type: Schema.Types.ObjectId,
       ref: 'User',
       required: true,
-      unique: true,
+      unique: true, // unique: true automatically creates an index
     },
     accountNumber: {
       type: String,
@@ -72,9 +72,6 @@ const BankSchema = new Schema<IBank>(
     timestamps: true,
   }
 );
-
-// Indexes
-BankSchema.index({ userId: 1 });
 
 const Bank: Model<IBank> = mongoose.models.Bank || mongoose.model<IBank>('Bank', BankSchema);
 
